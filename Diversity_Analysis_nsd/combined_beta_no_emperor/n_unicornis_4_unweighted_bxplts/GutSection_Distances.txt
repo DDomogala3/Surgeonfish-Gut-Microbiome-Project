@@ -1,0 +1,6 @@
+anterior_vs._middle	0.778592777435
+anterior_vs._posterior	0.920915661197
+anterior_vs._stomach	0.816834862886
+middle_vs._posterior	0.903142609291
+middle_vs._stomach	0.745315127167
+posterior_vs._stomach	0.836306016319

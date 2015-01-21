@@ -1,0 +1,23 @@
+# The tests of significance were performed using a two-sided Student's two-sample t-test.
+# Alternative hypothesis: Group 1 mean != Group 2 mean
+# The nonparametric p-values were calculated using 999 Monte Carlo permutations.
+# The nonparametric p-values contain the correct number of significant digits.
+# Entries marked with "N/A" could not be calculated because at least one of the groups
+# of distances was empty, both groups each contained only a single distance, or
+# the test could not be performed (e.g. no variance in groups with the same mean).
+Group 1	Group 2	t statistic	Parametric p-value	Parametric p-value (Bonferroni-corrected)	Nonparametric p-value	Nonparametric p-value (Bonferroni-corrected)
+anterior vs. middle	anterior vs. posterior	N/A	N/A	N/A	N/A	N/A
+anterior vs. middle	anterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. middle	middle vs. posterior	N/A	N/A	N/A	N/A	N/A
+anterior vs. middle	middle vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. middle	posterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. posterior	anterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. posterior	middle vs. posterior	N/A	N/A	N/A	N/A	N/A
+anterior vs. posterior	middle vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. posterior	posterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. stomach	middle vs. posterior	N/A	N/A	N/A	N/A	N/A
+anterior vs. stomach	middle vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. stomach	posterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+middle vs. posterior	middle vs. stomach	N/A	N/A	N/A	N/A	N/A
+middle vs. posterior	posterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+middle vs. stomach	posterior vs. stomach	N/A	N/A	N/A	N/A	N/A

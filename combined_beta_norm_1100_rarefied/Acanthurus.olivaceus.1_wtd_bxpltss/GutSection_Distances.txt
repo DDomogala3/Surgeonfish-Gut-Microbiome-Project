@@ -1,0 +1,6 @@
+anterior_vs._posterior	0.387029378175
+anterior_vs._stomach	0.389814414997
+anterior_vs._esophagus	0.478440143357
+posterior_vs._stomach	0.38182659654
+posterior_vs._esophagus	0.432598640525
+stomach_vs._esophagus	0.459248766076

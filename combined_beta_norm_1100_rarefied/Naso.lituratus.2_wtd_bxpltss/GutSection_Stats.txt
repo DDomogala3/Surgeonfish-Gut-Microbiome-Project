@@ -1,0 +1,18 @@
+# The tests of significance were performed using a two-sided Student's two-sample t-test.
+# Alternative hypothesis: Group 1 mean != Group 2 mean
+# The nonparametric p-values were calculated using 999 Monte Carlo permutations.
+# The nonparametric p-values contain the correct number of significant digits.
+# Entries marked with "N/A" could not be calculated because at least one of the groups
+# of distances was empty, both groups each contained only a single distance, or
+# the test could not be performed (e.g. no variance in groups with the same mean).
+Group 1	Group 2	t statistic	Parametric p-value	Parametric p-value (Bonferroni-corrected)	Nonparametric p-value	Nonparametric p-value (Bonferroni-corrected)
+middle vs. middle	posterior vs. posterior	N/A	N/A	N/A	N/A	N/A
+middle vs. middle	anterior vs. middle	0.782979367962	0.577108764636	1	0.675	1.000
+middle vs. middle	anterior vs. posterior	-0.433002596015	0.739858479496	1	1.000	1.000
+middle vs. middle	middle vs. posterior	-0.250741284154	0.818206378688	1	0.719	1.000
+posterior vs. posterior	anterior vs. middle	2.5122714763	0.241164870983	1	0.340	1.000
+posterior vs. posterior	anterior vs. posterior	0.916496257344	0.52772065499	1	0.649	1.000
+posterior vs. posterior	middle vs. posterior	0.852825991703	0.456432643962	1	0.474	1.000
+anterior vs. middle	anterior vs. posterior	-1.4255867399	0.290067005027	1	0.327	1.000
+anterior vs. middle	middle vs. posterior	-1.06027732466	0.34879569619	1	0.308	1.000
+anterior vs. posterior	middle vs. posterior	0.141485302281	0.894326251751	1	0.898	1.000

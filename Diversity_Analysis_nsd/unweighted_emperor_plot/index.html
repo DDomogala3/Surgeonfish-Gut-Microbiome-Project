@@ -1,0 +1,416 @@
+<!--
+*Summary of Emperor's Information*
+Command executed on January 20, 2015 at 10:47:27
+Emperor Version: 0.9.3
+QIIME Version: 0.9.3
+HostName: cn4.nauhpc
+Metadata: /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Combined_run_HIIMB_MF_2015_def.txt
+Coordinates: /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/unweighted_unifrac_pc.txt
+Command: /packages/qiime/qiime-1.8.0/emperor-0.9.3-release/bin/make_emperor.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/unweighted_unifrac_pc.txt -m /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Combined_run_HIIMB_MF_2015_def.txt -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/unweighted_emperor_plot --ignore_missing_samples
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Emperor</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="emperor_required_resources/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/emperor/css/emperor.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/jquery-ui2.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/colorPicker.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="emperor_required_resources/css/d3.parcoords.css">
+    <table id="logotable" style="vertical-align:middle;text-align:center;height:100%;width:100%;margin:0;padding:0;border:0;">
+        <tr><td><img src="emperor_required_resources/img/emperor.png" alt="Emperor" id="logo"/></td></tr>
+    </table>
+    <script type="text/javascript" src="emperor_required_resources/js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/d3.parcoords.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="emperor_required_resources/js/jquery.colorPicker.js"></script>
+    <script src="emperor_required_resources/js/spectrum.js"></script>
+
+    <script src="emperor_required_resources/js/Three.js"></script>
+    <script src="emperor_required_resources/js/js/Detector.js"></script>
+    <script src="emperor_required_resources/js/js/RequestAnimationFrame.js"></script>
+    <script src="emperor_required_resources/emperor/js/emperor.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/THREEx.screenshot.js"></script>
+    <script type="text/javascript" src="emperor_required_resources/js/FileSaver.min.js"></script>
+    
+    <script type="text/javascript">
+    
+var g_mappingFileHeaders = ['SampleID','LinkerPrimerSequence','PosessEpulos','GutSection','Species_gut_section','Individual_gut_location','Run_Number','Description'];
+var g_mappingFileData = { 'An10Ant1': ['An10Ant1','CC','Yes','anterior','Acanthurus.nigrofuscus.anterior','A.nigrofuscus.3.anterior','Run.2','Acanthurus.nigrofuscus.3'],'Ao20Stomach': ['Ao20Stomach','AG','No','stomach','Acanthurus.olivaceus.stomach','A.oliveaceus.1.stomach','Run.2','Acanthurus.olivaceus.1'],'Zv6Mid2': ['Zv6Mid2','CC','Yes','middle','Zebrasoma.Veliferum.middle','Z.velliferum.1.middle','Run.2','Zebrasoma.Veliferum.1'],'Zv6Mid1': ['Zv6Mid1','AG','Yes','middle','Zebrasoma.Veliferum.middle','Z.velliferum.1.middle','Run.2','Zebrasoma.Veliferum.1'],'Ax16Ant2': ['Ax16Ant2','CC','Yes','anterior','Acanthurus.xanthopterus.anterior','A.xanthopterus.1.anterior','Run.2','Acanthurus.xanthopterus.1'],'Ax16Ant1': ['Ax16Ant1','AG','No','anterior','Acanthurus.xanthopterus.anterior','A.xanthopterus.1.anterior','Run.2','Acanthurus.xanthopterus.1'],'2A': ['2A','CC','No','anterior','Naso unicornis.anterior','N.unicornis.4.anterior','Run.1','Naso.unicornis.4'],'Zf5Stomach': ['Zf5Stomach','AG','No','stomach','Zebrasoma.flavescens.stomach','Z.flavescens.2.stomach','Run.2','Zebrasoma.flavescens.2'],'Nl17Ant1': ['Nl17Ant1','AG','No','anterior','Naso.lituratus.anterior','N.lituratus.5.anterior','Run.2','Naso.lituratus.5'],'13M1': ['13M1','CC','Yes','middle','Naso unicornis.middle','N.unicornis.1.middle','Run.1','Naso.unicornis.1'],'Ax16Esophagus': ['Ax16Esophagus','AG','No','esophagus','Acanthurus.xanthopterus.esophagus','A.xanthopterus.1.esophagus','Run.2','Acanthurus.xanthopterus.1'],'12S': ['12S','CC','No','stomach','Acanthurus leucoparieus.stomach','A.leucoparieus.1.stomach','Run.1','Acanthurus.leucoparieus.1'],'12M2': ['12M2','CC','Yes','middle','Acanthurus leucoparieus.middle','A.leucoparieus.1.middle','Run.1','Acanthurus.leucoparieus.1'],'Al12Post3': ['Al12Post3','AG','Yes','posterior','Acanthurus.leucoparieus.posterior','A.leucoparieus.2.posterior','Run.2','Acanthurus.leucopareius.2'],'Al12Post2': ['Al12Post2','CC','Yes','posterior','Acanthurus.leucoparieus.posterior','A.leucoparieus.2.posterior','Run.2','Acanthurus.leucopareius.2'],'9P2': ['9P2','CC','Yes','posterior','Acanthurus triostegus.posterior','A.triostegus.1.posterior','Run.1','Acanthurus.triostegus.1'],'9P1': ['9P1','CC','No','posterior','Acanthurus triostegus.posterior','A.triostegus.1.posterior','Run.1','Acanthurus.triostegus.1'],'At14Esophagus': ['At14Esophagus','AG','Yes','esophagus','Acanthurus.triostegus.esophagus','A.triostegus.3.stomach','Run.2','Acanthurus.triostegus.3'],'2S': ['2S','CC','Yes','stomach','Naso unicornis.stomach','N.unicornis.4.stomach','Run.1','Naso.unicornis.4'],'Nu15Mid2': ['Nu15Mid2','AG','Yes','middle','Naso.unicornis.middle','N.unicornis.5.middle','Run.2','Naso.unicornis.5'],'Nu15Mid1': ['Nu15Mid1','CC','Yes','middle','Naso.unicornis.middle','N.unicornis.5.middle','Run.2','Naso.unicornis.5'],'Zf5Ant2': ['Zf5Ant2','AG','No','anterior','Zebrasoma.flavescens.anterior','Z.flavescens.2.anterior','Run.2','Zebrasoma.flavescens.2'],'Zf5Ant1': ['Zf5Ant1','CC','No','anterior','Zebrasoma.flavescens.anterior','Z.flavescens.2.anterior','Run.2','Zebrasoma.flavescens.2'],'3AbPost2': ['3AbPost2','CC','Yes','posterior','Acanthurus.blochii.posterior','A.blochii.1.posterior','Run.2','Acanthurus.blochii.1'],'3AbPost3': ['3AbPost3','AG','Yes','posterior','Acanthurus.blochii.posterior','A.blochii.1.posterior','Run.2','Acanthurus.blochii.1'],'10P2': ['10P2','CC','Yes','posterior','Naso unicornis.posterior','N.unicornis.2.posterior','Run.1','Naso.unicornis.2'],'10P1': ['10P1','CC','Yes','posterior','Naso unicornis.posterior','N.unicornis.2.posterior','Run.1','Naso.unicornis.2'],'2P1': ['2P1','CC','Yes','posterior','Naso unicornis.posterior','N.unicornis.4.posterior','Run.1','Naso.unicornis.4'],'At4Mid2': ['At4Mid2','AG','Yes','middle','Acanthurus.triostegus.middle','A.triostegus.2.middle','Run.2','Acanthurus.triostegus.2'],'Al12Ant2': ['Al12Ant2','AG','No','anterior','Acanthurus.leucoparieus.anterior','A.leucoparieus.2.anterior','Run.2','Acanthurus.leucopareius.2'],'7P1': ['7P1','CC','Yes','posterior','Acanthurus nigrofuscus.posterior','A.nigrofuscus.2.posterior','Run.1','Acanthurus.nigrofuscus.2'],'7P2': ['7P2','CC','Yes','posterior','Acanthurus nigrofuscus.posterior','A.nigrofuscus.2.posterior','Run.1','Acanthurus.nigrofuscus.2'],'13S': ['13S','CC','Yes','stomach','Naso unicornis.stomach','N.unicornis.1.stomach','Run.1','Naso.unicornis.1'],'Zv6Post1': ['Zv6Post1','AG','Yes','posterior','Zebrasoma.Veliferum.posterior','Z.velliferum.1.posterior','Run.2','Zebrasoma.Veliferum.1'],'Zv6Post2': ['Zv6Post2','AG','Yes','posterior','Zebrasoma.Veliferum.posterior','Z.velliferum.1.posterior','Run.2','Zebrasoma.Veliferum.1'],'Zv6Post3': ['Zv6Post3','CC','Yes','posterior','Zebrasoma.Veliferum.posterior','Z.velliferum.1.posterior','Run.2','Zebrasoma.Veliferum.1'],'Nl17Stomach': ['Nl17Stomach','CC','Yes','stomach','Naso.lituratus.stomach','N.lituratus.5.stomach','Run.2','Naso.lituratus.5'],'3M2': ['3M2','CC','Yes','middle','Naso lituratus.middle','N.lituratus.2.middle','Run.1','Naso.lituratus.2'],'3M1': ['3M1','CC','Yes','middle','Naso lituratus.middle','N.lituratus.2.middle','Run.1','Naso.lituratus.2'],'Ax16Stomach': ['Ax16Stomach','CC','No','stomach','Acanthurus.xanthopterus.stomach','A.xanthopterus.1.stomach','Run.2','Acanthurus.xanthopterus.1'],'Nl19Stomach': ['Nl19Stomach','AG','Yes','stomach','Naso.lituratus.stomach','N.lituratus.7.stomach','Run.2','Naso.lituratus.7'],'At14Post1': ['At14Post1','CC','No','posterior','Acanthurus.triostegus.posterior','A.triostegus.3.posterior','Run.2','Acanthurus.triostegus.3'],'12P2': ['12P2','CC','No','posterior','Acanthurus leucoparieus.posterior','A.leucoparieus.1.posterior','Run.1','Acanthurus.leucoparieus.1'],'Zf5Post1': ['Zf5Post1','AG','Yes','posterior','Zebrasoma.flavescens.posterior','Z.flavescens.2.posterior','Run.2','Zebrasoma.flavescens.2'],'Zf5Post3': ['Zf5Post3','AG','Yes','posterior','Zebrasoma.flavescens.posterior','Z.flavescens.2.posterior','Run.2','Zebrasoma.flavescens.2'],'Zf5Post2': ['Zf5Post2','CC','Yes','posterior','Zebrasoma.flavescens.posterior','Z.flavescens.2.posterior','Run.2','Zebrasoma.flavescens.2'],'Zf5Esophagus': ['Zf5Esophagus','CC','No','esophagus','Zebrasoma.flavescens.esophagus','Z.flavescens.2.esophagus','Run.2','Zebrasoma.flavescens.2'],'13M2': ['13M2','CC','Yes','middle','Naso unicornis.middle','N.unicornis.1.middle','Run.1','Naso.unicornis.1'],'Nl19Esoph': ['Nl19Esoph','CC','Yes','esophagus','Naso.lituratus.esophagus','N.lituratus.7.esophagus','Run.2','Naso.lituratus.7'],'Nu1Ant1': ['Nu1Ant1','AG','Yes','anterior','Naso.unicornis.anterior','Naso.unicornis.6.anterior','Run.2','Naso.unicornis.6'],'Nl17Esoph': ['Nl17Esoph','AG','Yes','esophagus','Naso.lituratus.esophagus','N.lituratus.5.esophagus','Run.2','Naso.lituratus.5'],'9M1': ['9M1','CC','Yes','middle','Acanthurus triostegus.middle','A.triostegus.1.middle','Run.1','Acanthurus.triostegus.1'],'Al12Stomach': ['Al12Stomach','CC','Yes','stomach','Acanthurus.leucoparieus.stomach','A.leucoparieus.2.stomach','Run.2','Acanthurus.leucopareius.2'],'9M2': ['9M2','CC','No','middle','Acanthurus triostegus.middle','A.triostegus.1.middle','Run.1','Acanthurus.triostegus.1'],'Nl17Post1': ['Nl17Post1','AG','Yes','posterior','Naso.lituratus.posterior','N.lituratus.5.posterior','Run.2','Naso.lituratus.5'],'Nl17Post2': ['Nl17Post2','CC','Yes','posterior','Naso.lituratus.posterior','N.lituratus.5.posterior','Run.2','Naso.lituratus.5'],'7M1': ['7M1','CC','Yes','middle','Acanthurus nigrofuscus.middle','A.nigrofuscus.2.middle','Run.1','Acanthurus.nigrofuscus.2'],'Zv6Stomach': ['Zv6Stomach','CC','Yes','stomach','Zebrasoma.Veliferum.stomach','Z.velliferum.1.stomach','Run.2','Zebrasoma.Veliferum.1'],'Nl18Esoph': ['Nl18Esoph','AG','No','esophagus','Naso.lituratus.esophagus','N.lituratus.6.esophagus','Run.2','Naso.lituratus.6'],'An10Stomach': ['An10Stomach','AG','Yes','stomach','Acanthurus.nigrofuscus.stomach','A.nigrofuscus.3.stomach','Run.2','Acanthurus.nigrofuscus.3'],'12A2': ['12A2','CC','No','anterior','Acanthurus leucoparieus.anterior','A.leucoparieus.1.anterior','Run.1','Acanthurus.leucoparieus.1'],'Nl8Ant1': ['Nl8Ant1','AG','Yes','anterior','Naso.lituratus.anterior','N.lituratus.4.anterior','Run.2','Naso.lituratus.4'],'Nl8Ant2': ['Nl8Ant2','CC','No','anterior','Naso.lituratus.anterior','N.lituratus.4.anterior','Run.2','Naso.lituratus.4'],'12A1': ['12A1','CC','No','anterior','Acanthurus leucoparieus.anterior','A.leucoparieus.1.anterior','Run.1','Acanthurus.leucoparieus.1'],'10M1': ['10M1','CC','Yes','middle','Naso unicornis.middle','N.unicornis.2.middle','Run.1','Naso.unicornis.2'],'10M2': ['10M2','CC','Yes','middle','Naso unicornis.middle','N.unicornis.2.middle','Run.1','Naso.unicornis.2'],'At4Ant1': ['At4Ant1','CC','No','anterior','Acanthurus.triostegus.anterior','A.triostegus.2.anterior','Run.2','Acanthurus.triostegus.2'],'11A': ['11A','CC','No','anterior','Acanthurus.nigrofuscus.anterior','A.nigrofuscus.1.anterior','Run.1','Acanthurus.nigrofuscus.1'],'6P2': ['6P2','CC','Yes','posterior','Naso unicornis.posterior','Naso.unicornis.3.posterior','Run.1','Naso.unicornis.3'],'At14Ant1': ['At14Ant1','AG','No','anterior','Acanthurus.triostegus.anterior','A.triostegus.3.anterior','Run.2','Acanthurus.triostegus.3'],'Nl8Mid2': ['Nl8Mid2','CC','Yes','middle','Naso.lituratus.middle','N.lituratus.4.middle','Run.2','Naso.lituratus.4'],'Nl8Mid1': ['Nl8Mid1','AG','No','middle','Naso.lituratus.middle','N.lituratus.4.middle','Run.2','Naso.lituratus.4'],'At14Ant2': ['At14Ant2','CC','Yes','anterior','Acanthurus.triostegus.anterior','A.triostegus.3.anterior','Run.2','Acanthurus.triostegus.3'],'3P1': ['3P1','CC','Yes','posterior','Naso lituratus.posterior','N.lituratus.2.posterior','Run.1','Naso.lituratus.2'],'11P': ['11P','CC','No','posterior','Acanthurus nigrofuscus.posterior','A.nigrofuscus.1.posterior','Run.1','Acanthurus.nigrofuscus.1'],'11S': ['11S','CC','Yes','stomach','Acanthurus nigrofuscus.stomach','A.nigrofuscus.1.stomach','Run.1','Acanthurus.nigrofuscus.1'],'8S': ['8S','CC','Yes','stomach','Zebrasome flavescens.stomach','Z.flavescens.1.stomach','Run.1','Zebrasoma.flavescens.1'],'Nl18Post1': ['Nl18Post1','CC','Yes','posterior','Naso.lituratus.posterior','N.lituratus.6.posterior','Run.2','Naso.lituratus.6'],'Nl18Post2': ['Nl18Post2','AG','Yes','posterior','Naso.lituratus.posterior','N.lituratus.6.posterior','Run.2','Naso.lituratus.6'],'1P': ['1P','CC','Yes','posterior','Naso lituratus.posterior','N.lituratus.3.posterior','Run.1','Naso.lituratus.3'],'1S': ['1S','CC','Yes','stomach','Naso lituratus.stomach','N.lituratus.3.stomach','Run.1','Naso.lituratus.3'],'Ax16Post1': ['Ax16Post1','CC','Yes','posterior','Acanthurus.xanthopterus.posterior','A.xanthopterus.1.posterior','Run.2','Acanthurus.xanthopterus.1'],'An9Ant2': ['An9Ant2','AG','Yes','anterior','Acanthurus.nigrofuscus.anterior','A.nigrofuscus.3.anterior','Run.2','Acanthurus.nigrofuscus.3'],'Ax16Post2': ['Ax16Post2','AG','No','posterior','Acanthurus.xanthopterus.posterior','A.xanthopterus.1.posterior','Run.2','Acanthurus.xanthopterus.1'],'1A': ['1A','CC','No','anterior','Naso lituratus.anterior','N.lituratus.3.anterior','Run.1','Naso.lituratus.3'],'8P2': ['8P2','CC','Yes','posterior','Zebrasoma flavescens.posterior','Z.flavescens.1.posterior','Run.1','Zebrasoma.flavescens.1'],'8P1': ['8P1','CC','Yes','posterior','Zebrasoma flavescens.posterior','Z.flavescens.1.posterior','Run.1','Zebrasoma.flavescens.1'],'Ao20Post1': ['Ao20Post1','AG','No','posterior','Acanthurus.olivaceus.posterior','A.oliveaceus.1.posterior','Run.2','Acanthurus.olivaceus.1'],'9A': ['9A','CC','Yes','anterior','Acanthurus triostegus.anterior','A.triostegus.1.anterior','Run.1','Acanthurus.triostegus.1'],'11M': ['11M','CC','Yes','middle','Acanthurus nigrofuscus.middle','A.nigrofuscus.1.middle','Run.1','Acanthurus.nigrofuscus.1'],'Nl19Ant1': ['Nl19Ant1','CC','Yes','anterior','Naso.lituratus.anterior','N.lituratus.7.anterior','Run.2','Naso.lituratus.7'],'3AbStomach': ['3AbStomach','CC','No','stomach','Acanthurus.blochii.stomach','A.blochii.1.stomach','Run.2','Acanthurus.blochii.1'],'9S': ['9S','CC','Yes','stomach','Acanthurus triostegus.stomach','A.triostegus.1.stomach','Run.1','Acanthurus.triostegus.1'],'Nl18Stomach': ['Nl18Stomach','CC','Yes','stomach','Naso.lituratus.stomach','N.lituratus.6.stomach','Run.2','Naso.lituratus.6'],'Nl19Mid2': ['Nl19Mid2','AG','Yes','middle','Naso.lituratus.middle','N.lituratus.7.middle','Run.2','Naso.lituratus.7'],'Nl19Mid1': ['Nl19Mid1','CC','Yes','middle','Naso.lituratus.middle','N.lituratus.7.middle','Run.2','Naso.lituratus.7'],'3Abmid1': ['3Abmid1','CC','No','middle','Acanthurus.blochii.middle','A.blochii.1.middle','Run.2','Acanthurus.blochii.1'],'13A2': ['13A2','CC','No','anterior','Naso unicornis.anterior','N.unicornis.1.anterior','Run.1','Naso.unicornis.1'],'Zf5Mid2': ['Zf5Mid2','CC','No','middle','Zebrasoma.flavescens.middle','Z.flavescens.2.middle','Run.2','Zebrasoma.flavescens.2'],'Nl17Mid1': ['Nl17Mid1','AG','Yes','middle','Naso.lituratus.middle','N.lituratus.5.middle','Run.2','Naso.lituratus.5'],'Nl17Mid2': ['Nl17Mid2','CC','Yes','middle','Naso.lituratus.middle','N.lituratus.5.middle','Run.2','Naso.lituratus.5'],'Nu15Post1': ['Nu15Post1','CC','Yes','posterior','Naso.unicornis.posterior','N.unicornis.5.posterior','Run.2','Naso.unicornis.5'],'Nu15Post2': ['Nu15Post2','AG','Yes','posterior','Naso.unicornis.posterior','N.unicornis.5.posterior','Run.2','Naso.unicornis.5'],'Al12Esophagus': ['Al12Esophagus','AG','No','esophagus','Acanthurus.leucoparieus.esophagus','A.leucoparieus.2.esophagus','Run.2','Acanthurus.leucopareius.2'],'6A': ['6A','CC','No','anterior','Naso unicornis.anterior','Naso.unicornis.3.anterior','Run.1','Naso.unicornis.3'],'Ax16Mid2': ['Ax16Mid2','AG','Yes','middle','Acanthurus.xanthopterus.middle','A.xanthopterus.1.middle','Run.2','Acanthurus.xanthopterus.1'],'13P1': ['13P1','CC','Yes','posterior','Naso unicornis.posterior','N.unicornis.1.posterior','Run.1','Naso.unicornis.1'],'13P2': ['13P2','CC','Yes','posterior','Naso unicornis.posterior','N.unicornis.1.posterior','Run.1','Naso.unicornis.1'],'8A': ['8A','CC','Yes','anterior','Zebrasoma flavescens.anterior','Z.flavescens.1.anterior','Run.1','Zebrasoma.flavescens.1'],'6M2': ['6M2','CC','Yes','middle','Naso unicornis.middle','Naso.unicornis.3.middle','Run.1','Naso.unicornis.3'],'8M': ['8M','CC','Yes','middle','Zebrasoma flavescens.middle','Z.flavescens.1.middle','Run.1','Zebrasoma.flavescens.1'],'12P1': ['12P1','CC','No','posterior','Acanthurus leucoparieus.posterior','A.leucoparieus.1.posterior','Run.1','Acanthurus.leucoparieus.1'],'Nl18Mid2': ['Nl18Mid2','AG','Yes','middle','Naso.lituratus.middle','N.lituratus.6.middle','Run.2','Naso.lituratus.6'],'Nl18Mid1': ['Nl18Mid1','CC','No','middle','Naso.lituratus.middle','N.lituratus.6.middle','Run.2','Naso.lituratus.6'],'Ct13Stomach': ['Ct13Stomach','CC','NA','stomach','Ctenochaetus.strigosus.stomach','C.strigosus.1.stomach','Run.2','Ctenochaetus.strigosus.1'],'Nl19Post2': ['Nl19Post2','AG','Yes','posterior','Naso.lituratus.posterior','N.lituratus.7.posterior','Run.2','Naso.lituratus.7'],'Nl19Post1': ['Nl19Post1','CC','Yes','posterior','Naso.lituratus.posterior','N.lituratus.7.posterior','Run.2','Naso.lituratus.7'],'6S': ['6S','CC','No','stomach','Naso unicornis.stomach','Naso.unicornis.3.stomach','Run.1','Naso.unicornis.3'],'3AbMid2': ['3AbMid2','CC','Yes','middle','Acanthurus.blochii.middle','A.blochii.1.middle','Run.2','Acanthurus.blochii.1'],'6M1': ['6M1','CC','Yes','middle','Naso unicornis.middle','Naso.unicornis.3.middle','Run.1','Naso.unicornis.3'],'12M1': ['12M1','CC','Yes','middle','Acanthurus leucoparieus.middle','A.leucoparieus.1.middle','Run.1','Acanthurus.leucoparieus.1'],'An10Mid': ['An10Mid','AG','Yes','middle','Acanthurus.nigrofuscus.middle','A.nigrofuscus.3.middle','Run.2','Acanthurus.nigrofuscus.3'],'At14Mid2': ['At14Mid2','CC','Yes','middle','Acanthurus.triostegus.middle','A.triostegus.3.middle','Run.2','Acanthurus.triostegus.3'],'At14Mid1': ['At14Mid1','AG','No','middle','Acanthurus.triostegus.middle','A.triostegus.3.middle','Run.2','Acanthurus.triostegus.3'],'Zv6Ant1': ['Zv6Ant1','AG','Yes','anterior','Zebrasoma.Veliferum.anterior','Z.velliferum.1.anterior','Run.2','Zebrasoma.Veliferum.1'],'Al11Ant1': ['Al11Ant1','AG','No','anterior','Acanthurus.leucoparieus.anterior','A.leucoparieus.2.anterior','Run.2','Acanthurus.leucopareius.2'],'Al11Ant2': ['Al11Ant2','CC','No','anterior','Acanthurus.leucoparieus.anterior','A.leucoparieus.2.anterior','Run.2','Acanthurus.leucopareius.2'],'3A': ['3A','CC','No','anterior','Naso lituratus.anterior','N.lituratus.2.anterior','Run.1','Naso.lituratus.2'],'Nu15Stomach': ['Nu15Stomach','CC','Yes','stomach','Naso.unicornis.stomach','N.unicornis.5.stomach','Run.2','Naso.unicornis.5'],'At14Stomach': ['At14Stomach','CC','No','stomach','Acanthurus.triostegus.stomach','A.triostegus.3.stomach','Run.2','Acanthurus.triostegus.3'],'Nu1post2': ['Nu1post2','AG','No','posterior','Naso.unicornis.posterior','Naso.unicornis.6.posterior','Run.2','Naso.unicornis.6'],'Nu1post3': ['Nu1post3','CC','No','posterior','Naso.unicornis.posterior','Naso.unicornis.6.posterior','Run.2','Naso.unicornis.6'],'An9Post2': ['An9Post2','CC','Yes','posterior','Acanthurus.nigrofuscus.posterior','A.nigrofuscus.3.posterior','Run.2','Acanthurus.nigrofuscus.3'],'Nu1post1': ['Nu1post1','CC','Yes','posterior','Naso.unicornis.posterior','Naso.unicornis.6.posterior','Run.2','Naso.unicornis.6'],'HG1': ['HG1','CC','No','stomach','Naso lituratus.stomach','N.lituratus.1.stomach','Run.1','Naso.lituratus.1'],'7S': ['7S','CC','No','stomach','Acanthurus nigrofuscus.stomach','A.nigrofucus.2.stomach','Run.1','Acanthurus.nigrofuscus.2'],'Nl8Esophagus': ['Nl8Esophagus','CC','Yes','esophagus','Naso.lituratus.esophagus','N.lituratus.4.esophagus','Run.2','Naso.lituratus.4'],'MG1': ['MG1','CC','Yes','stomach','Naso lituratus.stomach','N.lituratus.1.stomach','Run.1','Naso.lituratus.1'],'3Abpost1': ['3Abpost1','AG','Yes','posterior','Acanthurus.blochii.posterior','A.blochii.1.posterior','Run.2','Acanthurus.blochii.1'],'Al11Mid1': ['Al11Mid1','AG','Yes','middle','Acanthurus.leucoparieus.middle','A.leucoparieus.2.middle','Run.2','Acanthurus.leucopareius.2'],'Ao20Ant1': ['Ao20Ant1','CC','Yes','anterior','Acanthurus.olivaceus.anterior','A.oliveaceus.1.anterior','Run.2','Acanthurus.olivaceus.1'],'Ax16Post3': ['Ax16Post3','CC','No','posterior','Acanthurus.xanthopterus.posterior','A.xanthopterus.1.posterior','Run.2','Acanthurus.xanthopterus.1'],'Nu15Ant1': ['Nu15Ant1','AG','Yes','anterior','Naso.unicornis.anterior','N.unicornis.5.anterior','Run.2','Naso.unicornis.5'],'10A2': ['10A2','CC','No','anterior','Naso unicornis.anterior','N.unicornis.2.anterior','Run.1','Naso.unicornis.2'],'3AbAnt1': ['3AbAnt1','AG','Yes','anterior','Acanthurus.blochii.anterior','A.blochii.1.anterior','Run.2','Acanthurus.blochii.1'],'7A2': ['7A2','CC','Yes','anterior','Acanthurus.nigrofuscus.anterior','A.nigrofuscus.2.anterior','Run.1','Acanthurus.nigrofuscus.2'],'7A1': ['7A1','CC','No','anterior','Acanthurus.nigrofuscus.anterior','A.nigrofuscus.2.anterior','Run.1','Acanthurus.nigrofuscus.2'],'Nu15Esophagus': ['Nu15Esophagus','AG','Yes','esophagus','Naso.unicornis.esophagus','Naso.unicornis.5.esophagus','Run.2','Naso.unicornis.5'],'2M1': ['2M1','CC','Yes','middle','Naso unicornis.middle','N.unicornis.4.middle','Run.1','Naso.unicornis.4'],'At4Post1': ['At4Post1','CC','No','posterior','Acanthurus.triostegus.posterior','A.triostegus.2.posterior','Run.2','Acanthurus.triostegus.2'],'3P2': ['3P2','CC','Yes','posterior','Naso lituratus.posterior','N.lituratus.2.posterior','Run.1','Naso.lituratus.2'],'Nl18Ant1': ['Nl18Ant1','AG','No','anterior','Naso.lituratus.anterior','N.lituratus.6.anterior','Run.2','Naso.lituratus.6'],'Zv6Ant2': ['Zv6Ant2','CC','Yes','anterior','Zebrasoma.Veliferum.anterior','Z.velliferum.1.anterior','Run.2','Zebrasoma.Veliferum.1'],'Ao20Esophagus': ['Ao20Esophagus','CC','Yes','esophagus','Acanthurus.olivaceus.esophagus','A.oliveaceus.1.esophagus','Run.2','Acanthurus.olivaceus.1'],'At4Post2': ['At4Post2','AG','Yes','posterior','Acanthurus.triostegus.posterior','A.triostegus.2.posterior','Run.2','Acanthurus.triostegus.2'] };
+
+var g_spherePositions = new Array();
+g_spherePositions['An10Ant1'] = { 'name': 'An10Ant1', 'color': 0, 'x': -0.159931, 'y': 0.142786, 'z': -0.136004, 'P1': -0.159931, 'P2': 0.142786, 'P3': -0.136004, 'P4': 0.073274, 'P5': -0.037771, 'P6': 0.021305, 'P7': -0.073151, 'P8': 0.061670, 'P9': -0.031641, 'P10': 0.005469 };
+g_spherePositions['At4Post1'] = { 'name': 'At4Post1', 'color': 0, 'x': -0.198197, 'y': 0.055896, 'z': 0.007617, 'P1': -0.198197, 'P2': 0.055896, 'P3': 0.007617, 'P4': 0.018409, 'P5': -0.013133, 'P6': -0.011681, 'P7': -0.080029, 'P8': 0.045703, 'P9': 0.047310, 'P10': 0.024486 };
+g_spherePositions['Ao20Stomach'] = { 'name': 'Ao20Stomach', 'color': 0, 'x': -0.204005, 'y': -0.048459, 'z': 0.174647, 'P1': -0.204005, 'P2': -0.048459, 'P3': 0.174647, 'P4': -0.039733, 'P5': -0.004292, 'P6': -0.031656, 'P7': 0.048852, 'P8': -0.012898, 'P9': 0.076576, 'P10': -0.001411 };
+g_spherePositions['Zv6Mid2'] = { 'name': 'Zv6Mid2', 'color': 0, 'x': -0.056137, 'y': 0.186010, 'z': -0.254579, 'P1': -0.056137, 'P2': 0.186010, 'P3': -0.254579, 'P4': 0.151865, 'P5': -0.020581, 'P6': 0.040777, 'P7': -0.008628, 'P8': -0.074490, 'P9': 0.003549, 'P10': 0.042360 };
+g_spherePositions['Zv6Mid1'] = { 'name': 'Zv6Mid1', 'color': 0, 'x': -0.183880, 'y': 0.117657, 'z': -0.099008, 'P1': -0.183880, 'P2': 0.117657, 'P3': -0.099008, 'P4': 0.079242, 'P5': 0.004401, 'P6': 0.047416, 'P7': -0.148607, 'P8': 0.009281, 'P9': -0.021935, 'P10': 0.025118 };
+g_spherePositions['Ax16Ant2'] = { 'name': 'Ax16Ant2', 'color': 0, 'x': -0.007676, 'y': -0.019161, 'z': 0.029692, 'P1': -0.007676, 'P2': -0.019161, 'P3': 0.029692, 'P4': 0.006733, 'P5': 0.170150, 'P6': 0.124983, 'P7': 0.108881, 'P8': 0.171246, 'P9': -0.081069, 'P10': -0.024554 };
+g_spherePositions['Ax16Ant1'] = { 'name': 'Ax16Ant1', 'color': 0, 'x': -0.052159, 'y': -0.020689, 'z': 0.061664, 'P1': -0.052159, 'P2': -0.020689, 'P3': 0.061664, 'P4': 0.003385, 'P5': 0.164156, 'P6': 0.117527, 'P7': 0.102953, 'P8': 0.143805, 'P9': -0.047790, 'P10': -0.041298 };
+g_spherePositions['3AbPost2'] = { 'name': '3AbPost2', 'color': 0, 'x': -0.187356, 'y': 0.078630, 'z': -0.022478, 'P1': -0.187356, 'P2': 0.078630, 'P3': -0.022478, 'P4': 0.012596, 'P5': -0.040309, 'P6': -0.014437, 'P7': -0.064728, 'P8': 0.113495, 'P9': 0.004003, 'P10': -0.028387 };
+g_spherePositions['Nl17Ant1'] = { 'name': 'Nl17Ant1', 'color': 0, 'x': -0.224244, 'y': -0.057282, 'z': 0.124241, 'P1': -0.224244, 'P2': -0.057282, 'P3': 0.124241, 'P4': -0.019596, 'P5': -0.018609, 'P6': -0.072015, 'P7': 0.061625, 'P8': 0.073153, 'P9': 0.119877, 'P10': -0.026187 };
+g_spherePositions['13M1'] = { 'name': '13M1', 'color': 0, 'x': 0.375573, 'y': 0.153760, 'z': 0.310809, 'P1': 0.375573, 'P2': 0.153760, 'P3': 0.310809, 'P4': 0.372417, 'P5': -0.060956, 'P6': -0.045563, 'P7': -0.004913, 'P8': 0.020242, 'P9': -0.019882, 'P10': 0.014961 };
+g_spherePositions['Ao20Post1'] = { 'name': 'Ao20Post1', 'color': 0, 'x': -0.187428, 'y': -0.031252, 'z': 0.162346, 'P1': -0.187428, 'P2': -0.031252, 'P3': 0.162346, 'P4': -0.052688, 'P5': 0.005622, 'P6': -0.009579, 'P7': -0.012172, 'P8': -0.046575, 'P9': 0.041081, 'P10': -0.038949 };
+g_spherePositions['12S'] = { 'name': '12S', 'color': 0, 'x': 0.174830, 'y': 0.207656, 'z': -0.049840, 'P1': 0.174830, 'P2': 0.207656, 'P3': -0.049840, 'P4': -0.248746, 'P5': -0.127466, 'P6': -0.085268, 'P7': 0.126590, 'P8': 0.142806, 'P9': 0.007450, 'P10': 0.153147 };
+g_spherePositions['6M2'] = { 'name': '6M2', 'color': 0, 'x': 0.163334, 'y': 0.085266, 'z': -0.033722, 'P1': 0.163334, 'P2': 0.085266, 'P3': -0.033722, 'P4': -0.194834, 'P5': -0.082500, 'P6': -0.046349, 'P7': 0.081030, 'P8': 0.036507, 'P9': -0.179332, 'P10': 0.116581 };
+g_spherePositions['Al12Post3'] = { 'name': 'Al12Post3', 'color': 0, 'x': 0.008186, 'y': -0.184685, 'z': -0.139752, 'P1': 0.008186, 'P2': -0.184685, 'P3': -0.139752, 'P4': 0.067639, 'P5': 0.140966, 'P6': -0.151795, 'P7': -0.075833, 'P8': -0.055183, 'P9': -0.040112, 'P10': 0.002376 };
+g_spherePositions['12M1'] = { 'name': '12M1', 'color': 0, 'x': 0.278337, 'y': 0.225145, 'z': 0.123388, 'P1': 0.278337, 'P2': 0.225145, 'P3': 0.123388, 'P4': -0.081549, 'P5': -0.096582, 'P6': -0.013937, 'P7': -0.032648, 'P8': -0.014655, 'P9': 0.023373, 'P10': -0.012418 };
+g_spherePositions['9P2'] = { 'name': '9P2', 'color': 0, 'x': 0.234757, 'y': -0.025661, 'z': -0.054185, 'P1': 0.234757, 'P2': -0.025661, 'P3': -0.054185, 'P4': -0.149200, 'P5': 0.064257, 'P6': -0.142795, 'P7': -0.085780, 'P8': -0.094370, 'P9': -0.001159, 'P10': -0.070227 };
+g_spherePositions['9P1'] = { 'name': '9P1', 'color': 0, 'x': 0.213045, 'y': -0.252923, 'z': -0.165688, 'P1': 0.213045, 'P2': -0.252923, 'P3': -0.165688, 'P4': 0.038185, 'P5': 0.104820, 'P6': -0.300710, 'P7': 0.007498, 'P8': -0.003304, 'P9': 0.024647, 'P10': -0.131639 };
+g_spherePositions['At14Esophagus'] = { 'name': 'At14Esophagus', 'color': 0, 'x': -0.155842, 'y': -0.099167, 'z': 0.097985, 'P1': -0.155842, 'P2': -0.099167, 'P3': 0.097985, 'P4': -0.021021, 'P5': -0.006797, 'P6': -0.023685, 'P7': -0.012780, 'P8': -0.059757, 'P9': 0.064318, 'P10': -0.014445 };
+g_spherePositions['2S'] = { 'name': '2S', 'color': 0, 'x': 0.202482, 'y': -0.048157, 'z': 0.029582, 'P1': 0.202482, 'P2': -0.048157, 'P3': 0.029582, 'P4': -0.101999, 'P5': 0.091914, 'P6': 0.205766, 'P7': -0.020065, 'P8': -0.098125, 'P9': -0.021433, 'P10': -0.046626 };
+g_spherePositions['Nu15Mid2'] = { 'name': 'Nu15Mid2', 'color': 0, 'x': -0.174821, 'y': -0.123171, 'z': 0.111441, 'P1': -0.174821, 'P2': -0.123171, 'P3': 0.111441, 'P4': -0.035074, 'P5': -0.022718, 'P6': -0.042499, 'P7': 0.080883, 'P8': 0.002507, 'P9': -0.151011, 'P10': 0.039229 };
+g_spherePositions['Nu15Mid1'] = { 'name': 'Nu15Mid1', 'color': 0, 'x': -0.170231, 'y': -0.087468, 'z': 0.074571, 'P1': -0.170231, 'P2': -0.087468, 'P3': 0.074571, 'P4': -0.023369, 'P5': -0.010054, 'P6': -0.012906, 'P7': 0.092509, 'P8': 0.032101, 'P9': -0.137451, 'P10': 0.001401 };
+g_spherePositions['2A'] = { 'name': '2A', 'color': 0, 'x': 0.218650, 'y': 0.224920, 'z': 0.044879, 'P1': 0.218650, 'P2': 0.224920, 'P3': 0.044879, 'P4': -0.239452, 'P5': -0.107610, 'P6': -0.028920, 'P7': -0.003337, 'P8': 0.021173, 'P9': 0.028049, 'P10': 0.019328 };
+g_spherePositions['Zf5Ant1'] = { 'name': 'Zf5Ant1', 'color': 0, 'x': -0.167873, 'y': 0.145321, 'z': -0.133970, 'P1': -0.167873, 'P2': 0.145321, 'P3': -0.133970, 'P4': 0.069717, 'P5': -0.047451, 'P6': 0.008180, 'P7': -0.069130, 'P8': 0.055935, 'P9': 0.015781, 'P10': 0.014627 };
+g_spherePositions['Zf5Stomach'] = { 'name': 'Zf5Stomach', 'color': 0, 'x': -0.161482, 'y': 0.147679, 'z': -0.140836, 'P1': -0.161482, 'P2': 0.147679, 'P3': -0.140836, 'P4': 0.109632, 'P5': -0.028537, 'P6': 0.047121, 'P7': -0.067129, 'P8': -0.059399, 'P9': 0.042682, 'P10': 0.042277 };
+g_spherePositions['3AbPost3'] = { 'name': '3AbPost3', 'color': 0, 'x': -0.227867, 'y': -0.052268, 'z': 0.139063, 'P1': -0.227867, 'P2': -0.052268, 'P3': 0.139063, 'P4': -0.038376, 'P5': -0.018706, 'P6': -0.061161, 'P7': 0.022449, 'P8': 0.063167, 'P9': 0.098806, 'P10': -0.008410 };
+g_spherePositions['10P2'] = { 'name': '10P2', 'color': 0, 'x': 0.276758, 'y': -0.346043, 'z': -0.126704, 'P1': 0.276758, 'P2': -0.346043, 'P3': -0.126704, 'P4': 0.010355, 'P5': -0.220023, 'P6': 0.128460, 'P7': -0.061756, 'P8': 0.068056, 'P9': 0.078679, 'P10': -0.052434 };
+g_spherePositions['10P1'] = { 'name': '10P1', 'color': 0, 'x': 0.261268, 'y': -0.381137, 'z': -0.170533, 'P1': 0.261268, 'P2': -0.381137, 'P3': -0.170533, 'P4': 0.024638, 'P5': -0.219661, 'P6': 0.109702, 'P7': -0.038962, 'P8': 0.080136, 'P9': 0.081101, 'P10': -0.056989 };
+g_spherePositions['2P1'] = { 'name': '2P1', 'color': 0, 'x': 0.282343, 'y': -0.352831, 'z': -0.149226, 'P1': 0.282343, 'P2': -0.352831, 'P3': -0.149226, 'P4': 0.035381, 'P5': -0.214355, 'P6': 0.088317, 'P7': -0.040031, 'P8': 0.078286, 'P9': 0.110538, 'P10': -0.079420 };
+g_spherePositions['At4Mid2'] = { 'name': 'At4Mid2', 'color': 0, 'x': -0.211725, 'y': 0.053751, 'z': 0.011010, 'P1': -0.211725, 'P2': 0.053751, 'P3': 0.011010, 'P4': 0.013988, 'P5': -0.007653, 'P6': -0.002172, 'P7': -0.127062, 'P8': 0.071926, 'P9': 0.048104, 'P10': -0.003651 };
+g_spherePositions['Al12Ant2'] = { 'name': 'Al12Ant2', 'color': 0, 'x': -0.011722, 'y': 0.187217, 'z': -0.239586, 'P1': -0.011722, 'P2': 0.187217, 'P3': -0.239586, 'P4': 0.137092, 'P5': -0.051251, 'P6': 0.027265, 'P7': 0.160983, 'P8': -0.145933, 'P9': 0.097611, 'P10': -0.002579 };
+g_spherePositions['7P1'] = { 'name': '7P1', 'color': 0, 'x': 0.141984, 'y': -0.055701, 'z': -0.108540, 'P1': 0.141984, 'P2': -0.055701, 'P3': -0.108540, 'P4': -0.003141, 'P5': 0.166686, 'P6': -0.168283, 'P7': 0.141185, 'P8': 0.103400, 'P9': -0.109255, 'P10': -0.042740 };
+g_spherePositions['7P2'] = { 'name': '7P2', 'color': 0, 'x': 0.368677, 'y': 0.111851, 'z': 0.268504, 'P1': 0.368677, 'P2': 0.111851, 'P3': 0.268504, 'P4': 0.338582, 'P5': 0.080932, 'P6': 0.016619, 'P7': 0.004631, 'P8': 0.046288, 'P9': -0.028985, 'P10': 0.003869 };
+g_spherePositions['13S'] = { 'name': '13S', 'color': 0, 'x': 0.076227, 'y': 0.195291, 'z': 0.015720, 'P1': 0.076227, 'P2': 0.195291, 'P3': 0.015720, 'P4': -0.219287, 'P5': -0.046495, 'P6': 0.019512, 'P7': -0.070385, 'P8': -0.033991, 'P9': 0.023493, 'P10': -0.086085 };
+g_spherePositions['Zv6Post1'] = { 'name': 'Zv6Post1', 'color': 0, 'x': -0.198849, 'y': 0.077717, 'z': -0.083075, 'P1': -0.198849, 'P2': 0.077717, 'P3': -0.083075, 'P4': 0.079753, 'P5': 0.052707, 'P6': 0.053985, 'P7': -0.162048, 'P8': -0.007911, 'P9': -0.052397, 'P10': 0.013959 };
+g_spherePositions['Zv6Post2'] = { 'name': 'Zv6Post2', 'color': 0, 'x': -0.100108, 'y': 0.017912, 'z': -0.055128, 'P1': -0.100108, 'P2': 0.017912, 'P3': -0.055128, 'P4': 0.036183, 'P5': 0.101120, 'P6': -0.005084, 'P7': -0.187837, 'P8': -0.034940, 'P9': -0.042487, 'P10': 0.083265 };
+g_spherePositions['Zv6Post3'] = { 'name': 'Zv6Post3', 'color': 0, 'x': -0.138133, 'y': 0.010227, 'z': -0.069326, 'P1': -0.138133, 'P2': 0.010227, 'P3': -0.069326, 'P4': 0.039569, 'P5': 0.100015, 'P6': 0.008527, 'P7': -0.178072, 'P8': -0.000112, 'P9': -0.081940, 'P10': 0.086220 };
+g_spherePositions['Nl17Stomach'] = { 'name': 'Nl17Stomach', 'color': 0, 'x': -0.147680, 'y': -0.120152, 'z': 0.164923, 'P1': -0.147680, 'P2': -0.120152, 'P3': 0.164923, 'P4': -0.045393, 'P5': 0.034860, 'P6': 0.036185, 'P7': 0.044229, 'P8': -0.069717, 'P9': 0.001720, 'P10': 0.018296 };
+g_spherePositions['3M2'] = { 'name': '3M2', 'color': 0, 'x': 0.374664, 'y': 0.167320, 'z': 0.308606, 'P1': 0.374664, 'P2': 0.167320, 'P3': 0.308606, 'P4': 0.365741, 'P5': -0.060268, 'P6': -0.044652, 'P7': -0.016527, 'P8': 0.024534, 'P9': -0.019696, 'P10': 0.009003 };
+g_spherePositions['3M1'] = { 'name': '3M1', 'color': 0, 'x': 0.199413, 'y': 0.206934, 'z': 0.063347, 'P1': 0.199413, 'P2': 0.206934, 'P3': 0.063347, 'P4': -0.206805, 'P5': -0.068159, 'P6': 0.018595, 'P7': -0.066084, 'P8': -0.049341, 'P9': -0.001661, 'P10': -0.051853 };
+g_spherePositions['Nl18Mid2'] = { 'name': 'Nl18Mid2', 'color': 0, 'x': -0.231897, 'y': -0.094832, 'z': 0.152080, 'P1': -0.231897, 'P2': -0.094832, 'P3': 0.152080, 'P4': -0.050025, 'P5': -0.008949, 'P6': -0.020541, 'P7': 0.026191, 'P8': -0.052940, 'P9': -0.052323, 'P10': 0.031350 };
+g_spherePositions['Ax16Stomach'] = { 'name': 'Ax16Stomach', 'color': 0, 'x': -0.184652, 'y': -0.118284, 'z': 0.156685, 'P1': -0.184652, 'P2': -0.118284, 'P3': 0.156685, 'P4': -0.047349, 'P5': 0.004014, 'P6': 0.003355, 'P7': 0.009512, 'P8': -0.056250, 'P9': 0.002360, 'P10': 0.032774 };
+g_spherePositions['Nl19Stomach'] = { 'name': 'Nl19Stomach', 'color': 0, 'x': -0.046183, 'y': -0.237278, 'z': 0.091896, 'P1': -0.046183, 'P2': -0.237278, 'P3': 0.091896, 'P4': -0.013743, 'P5': 0.073137, 'P6': 0.159267, 'P7': 0.058053, 'P8': -0.042071, 'P9': -0.052173, 'P10': 0.051848 };
+g_spherePositions['3A'] = { 'name': '3A', 'color': 0, 'x': 0.250821, 'y': 0.216581, 'z': 0.088635, 'P1': 0.250821, 'P2': 0.216581, 'P3': 0.088635, 'P4': -0.196615, 'P5': -0.087672, 'P6': 0.004745, 'P7': -0.041993, 'P8': -0.060758, 'P9': 0.051934, 'P10': -0.059530 };
+g_spherePositions['Ct13Stomach'] = { 'name': 'Ct13Stomach', 'color': 0, 'x': -0.068973, 'y': 0.139332, 'z': -0.107059, 'P1': -0.068973, 'P2': 0.139332, 'P3': -0.107059, 'P4': 0.012718, 'P5': -0.018642, 'P6': 0.031316, 'P7': -0.011603, 'P8': -0.039460, 'P9': -0.024775, 'P10': -0.031177 };
+g_spherePositions['Zf5Post1'] = { 'name': 'Zf5Post1', 'color': 0, 'x': -0.161174, 'y': 0.075589, 'z': -0.038746, 'P1': -0.161174, 'P2': 0.075589, 'P3': -0.038746, 'P4': 0.033042, 'P5': 0.024876, 'P6': 0.025026, 'P7': -0.141597, 'P8': 0.104916, 'P9': -0.001913, 'P10': 0.133017 };
+g_spherePositions['Zf5Post3'] = { 'name': 'Zf5Post3', 'color': 0, 'x': -0.115803, 'y': 0.024693, 'z': -0.073017, 'P1': -0.115803, 'P2': 0.024693, 'P3': -0.073017, 'P4': 0.033480, 'P5': 0.105155, 'P6': -0.029505, 'P7': -0.134734, 'P8': 0.052349, 'P9': -0.077680, 'P10': 0.071228 };
+g_spherePositions['Zf5Post2'] = { 'name': 'Zf5Post2', 'color': 0, 'x': -0.150577, 'y': 0.098411, 'z': -0.084127, 'P1': -0.150577, 'P2': 0.098411, 'P3': -0.084127, 'P4': 0.042022, 'P5': 0.009843, 'P6': -0.005031, 'P7': -0.071087, 'P8': 0.104442, 'P9': -0.031649, 'P10': 0.052239 };
+g_spherePositions['Nl19Post2'] = { 'name': 'Nl19Post2', 'color': 0, 'x': -0.107826, 'y': -0.254050, 'z': 0.101899, 'P1': -0.107826, 'P2': -0.254050, 'P3': 0.101899, 'P4': -0.018816, 'P5': -0.062192, 'P6': 0.026767, 'P7': -0.000095, 'P8': -0.094523, 'P9': -0.040630, 'P10': 0.051535 };
+g_spherePositions['Zf5Esophagus'] = { 'name': 'Zf5Esophagus', 'color': 0, 'x': -0.040630, 'y': 0.205412, 'z': -0.241249, 'P1': -0.040630, 'P2': 0.205412, 'P3': -0.241249, 'P4': 0.133635, 'P5': -0.064003, 'P6': 0.043126, 'P7': 0.039650, 'P8': -0.111258, 'P9': 0.112720, 'P10': 0.132165 };
+g_spherePositions['An9Ant2'] = { 'name': 'An9Ant2', 'color': 0, 'x': -0.160557, 'y': 0.079512, 'z': -0.037478, 'P1': -0.160557, 'P2': 0.079512, 'P3': -0.037478, 'P4': 0.031847, 'P5': 0.050338, 'P6': 0.055276, 'P7': -0.095159, 'P8': 0.061136, 'P9': -0.000015, 'P10': -0.017739 };
+g_spherePositions['13M2'] = { 'name': '13M2', 'color': 0, 'x': 0.138033, 'y': 0.181410, 'z': -0.025541, 'P1': 0.138033, 'P2': 0.181410, 'P3': -0.025541, 'P4': -0.240818, 'P5': -0.067412, 'P6': -0.013841, 'P7': -0.036722, 'P8': 0.050215, 'P9': -0.049605, 'P10': 0.024376 };
+g_spherePositions['Nl19Esoph'] = { 'name': 'Nl19Esoph', 'color': 0, 'x': -0.177095, 'y': -0.159327, 'z': 0.156506, 'P1': -0.177095, 'P2': -0.159327, 'P3': 0.156506, 'P4': -0.047129, 'P5': -0.040357, 'P6': -0.022963, 'P7': 0.024472, 'P8': -0.083114, 'P9': 0.013019, 'P10': 0.024882 };
+g_spherePositions['Nu1Ant1'] = { 'name': 'Nu1Ant1', 'color': 0, 'x': -0.095596, 'y': 0.123818, 'z': -0.198029, 'P1': -0.095596, 'P2': 0.123818, 'P3': -0.198029, 'P4': 0.131986, 'P5': -0.046899, 'P6': 0.000495, 'P7': 0.083795, 'P8': -0.025982, 'P9': -0.037532, 'P10': 0.023184 };
+g_spherePositions['Nl17Esoph'] = { 'name': 'Nl17Esoph', 'color': 0, 'x': -0.204065, 'y': -0.135155, 'z': 0.147422, 'P1': -0.204065, 'P2': -0.135155, 'P3': 0.147422, 'P4': -0.033840, 'P5': -0.018216, 'P6': -0.030760, 'P7': 0.045554, 'P8': -0.054387, 'P9': -0.040768, 'P10': 0.003662 };
+g_spherePositions['9M1'] = { 'name': '9M1', 'color': 0, 'x': 0.193369, 'y': -0.048942, 'z': -0.022921, 'P1': 0.193369, 'P2': -0.048942, 'P3': -0.022921, 'P4': -0.034100, 'P5': 0.327922, 'P6': 0.124781, 'P7': -0.036772, 'P8': 0.004180, 'P9': 0.053330, 'P10': 0.045338 };
+g_spherePositions['Al12Stomach'] = { 'name': 'Al12Stomach', 'color': 0, 'x': -0.035979, 'y': 0.001800, 'z': -0.083005, 'P1': -0.035979, 'P2': 0.001800, 'P3': -0.083005, 'P4': 0.071990, 'P5': 0.212367, 'P6': 0.140713, 'P7': 0.013865, 'P8': 0.041752, 'P9': -0.064840, 'P10': -0.006246 };
+g_spherePositions['9M2'] = { 'name': '9M2', 'color': 0, 'x': 0.192433, 'y': -0.167219, 'z': -0.141279, 'P1': 0.192433, 'P2': -0.167219, 'P3': -0.141279, 'P4': 0.029080, 'P5': 0.138623, 'P6': -0.326146, 'P7': 0.065255, 'P8': -0.031558, 'P9': -0.052054, 'P10': -0.094360 };
+g_spherePositions['Nl17Post1'] = { 'name': 'Nl17Post1', 'color': 0, 'x': -0.019023, 'y': -0.275724, 'z': 0.063499, 'P1': -0.019023, 'P2': -0.275724, 'P3': 0.063499, 'P4': -0.004905, 'P5': -0.092013, 'P6': 0.075045, 'P7': -0.032459, 'P8': -0.066970, 'P9': -0.001159, 'P10': 0.053302 };
+g_spherePositions['Nl17Post2'] = { 'name': 'Nl17Post2', 'color': 0, 'x': 0.094831, 'y': -0.373199, 'z': -0.107542, 'P1': 0.094831, 'P2': -0.373199, 'P3': -0.107542, 'P4': 0.050465, 'P5': -0.169890, 'P6': 0.090156, 'P7': 0.005315, 'P8': 0.051564, 'P9': -0.082499, 'P10': -0.001534 };
+g_spherePositions['7M1'] = { 'name': '7M1', 'color': 0, 'x': 0.370478, 'y': 0.148661, 'z': 0.298945, 'P1': 0.370478, 'P2': 0.148661, 'P3': 0.298945, 'P4': 0.364920, 'P5': 0.002508, 'P6': -0.020430, 'P7': -0.012445, 'P8': 0.022161, 'P9': -0.021136, 'P10': -0.006577 };
+g_spherePositions['Zv6Stomach'] = { 'name': 'Zv6Stomach', 'color': 0, 'x': -0.193713, 'y': 0.096592, 'z': -0.063943, 'P1': -0.193713, 'P2': 0.096592, 'P3': -0.063943, 'P4': 0.053179, 'P5': 0.003664, 'P6': 0.012877, 'P7': -0.086438, 'P8': 0.042023, 'P9': 0.027078, 'P10': -0.006175 };
+g_spherePositions['Nl18Esoph'] = { 'name': 'Nl18Esoph', 'color': 0, 'x': -0.215349, 'y': -0.046563, 'z': 0.158541, 'P1': -0.215349, 'P2': -0.046563, 'P3': 0.158541, 'P4': -0.037246, 'P5': -0.023161, 'P6': -0.038921, 'P7': -0.001125, 'P8': 0.031693, 'P9': 0.048469, 'P10': 0.000428 };
+g_spherePositions['An10Stomach'] = { 'name': 'An10Stomach', 'color': 0, 'x': -0.065503, 'y': 0.104185, 'z': -0.099018, 'P1': -0.065503, 'P2': 0.104185, 'P3': -0.099018, 'P4': 0.060333, 'P5': 0.141028, 'P6': 0.148944, 'P7': -0.038538, 'P8': 0.092642, 'P9': -0.027383, 'P10': 0.011970 };
+g_spherePositions['12A2'] = { 'name': '12A2', 'color': 0, 'x': 0.382046, 'y': 0.163856, 'z': 0.310563, 'P1': 0.382046, 'P2': 0.163856, 'P3': 0.310563, 'P4': 0.383190, 'P5': -0.058104, 'P6': -0.050859, 'P7': -0.005095, 'P8': 0.028533, 'P9': -0.013430, 'P10': 0.008923 };
+g_spherePositions['Nl8Ant1'] = { 'name': 'Nl8Ant1', 'color': 0, 'x': -0.169155, 'y': 0.086025, 'z': -0.123778, 'P1': -0.169155, 'P2': 0.086025, 'P3': -0.123778, 'P4': 0.076862, 'P5': -0.019878, 'P6': 0.010533, 'P7': -0.005872, 'P8': 0.057914, 'P9': -0.045736, 'P10': -0.050082 };
+g_spherePositions['Nl8Ant2'] = { 'name': 'Nl8Ant2', 'color': 0, 'x': -0.170364, 'y': 0.111298, 'z': -0.114235, 'P1': -0.170364, 'P2': 0.111298, 'P3': -0.114235, 'P4': 0.080166, 'P5': 0.014328, 'P6': 0.039366, 'P7': -0.047196, 'P8': 0.010031, 'P9': -0.027849, 'P10': -0.066869 };
+g_spherePositions['12A1'] = { 'name': '12A1', 'color': 0, 'x': 0.142508, 'y': 0.204544, 'z': 0.068087, 'P1': 0.142508, 'P2': 0.204544, 'P3': 0.068087, 'P4': -0.177468, 'P5': -0.039731, 'P6': 0.045401, 'P7': -0.072855, 'P8': -0.075326, 'P9': 0.045940, 'P10': -0.088129 };
+g_spherePositions['8P2'] = { 'name': '8P2', 'color': 0, 'x': 0.231627, 'y': -0.281241, 'z': -0.150682, 'P1': 0.231627, 'P2': -0.281241, 'P3': -0.150682, 'P4': 0.047148, 'P5': 0.141183, 'P6': -0.207638, 'P7': -0.065611, 'P8': -0.031197, 'P9': 0.167088, 'P10': 0.184721 };
+g_spherePositions['8P1'] = { 'name': '8P1', 'color': 0, 'x': 0.207826, 'y': -0.247077, 'z': -0.141797, 'P1': 0.207826, 'P2': -0.247077, 'P3': -0.141797, 'P4': 0.042333, 'P5': 0.183730, 'P6': -0.233810, 'P7': -0.047363, 'P8': -0.027596, 'P9': 0.139944, 'P10': 0.193142 };
+g_spherePositions['11A'] = { 'name': '11A', 'color': 0, 'x': 0.205481, 'y': 0.209678, 'z': -0.025296, 'P1': 0.205481, 'P2': 0.209678, 'P3': -0.025296, 'P4': -0.251058, 'P5': -0.107696, 'P6': -0.053167, 'P7': 0.070950, 'P8': 0.060108, 'P9': 0.000922, 'P10': 0.128460 };
+g_spherePositions['6P2'] = { 'name': '6P2', 'color': 0, 'x': 0.257967, 'y': -0.409376, 'z': -0.181710, 'P1': 0.257967, 'P2': -0.409376, 'P3': -0.181710, 'P4': 0.055753, 'P5': -0.218062, 'P6': 0.093554, 'P7': -0.022978, 'P8': 0.099970, 'P9': 0.086111, 'P10': -0.053770 };
+g_spherePositions['At14Ant1'] = { 'name': 'At14Ant1', 'color': 0, 'x': -0.225567, 'y': -0.056501, 'z': 0.112207, 'P1': -0.225567, 'P2': -0.056501, 'P3': 0.112207, 'P4': -0.015681, 'P5': 0.019833, 'P6': -0.048593, 'P7': 0.026262, 'P8': -0.029321, 'P9': 0.045200, 'P10': -0.055576 };
+g_spherePositions['Nl8Mid2'] = { 'name': 'Nl8Mid2', 'color': 0, 'x': -0.125121, 'y': 0.135287, 'z': -0.179628, 'P1': -0.125121, 'P2': 0.135287, 'P3': -0.179628, 'P4': 0.115374, 'P5': -0.045899, 'P6': 0.009029, 'P7': 0.062642, 'P8': -0.040172, 'P9': -0.052790, 'P10': -0.114821 };
+g_spherePositions['Nl8Mid1'] = { 'name': 'Nl8Mid1', 'color': 0, 'x': -0.094238, 'y': 0.159885, 'z': -0.193574, 'P1': -0.094238, 'P2': 0.159885, 'P3': -0.193574, 'P4': 0.091059, 'P5': -0.022123, 'P6': 0.011325, 'P7': -0.054578, 'P8': 0.064442, 'P9': -0.013619, 'P10': 0.114282 };
+g_spherePositions['8A'] = { 'name': '8A', 'color': 0, 'x': 0.221801, 'y': -0.156777, 'z': -0.113780, 'P1': 0.221801, 'P2': -0.156777, 'P3': -0.113780, 'P4': -0.069455, 'P5': 0.192942, 'P6': -0.173595, 'P7': -0.088155, 'P8': -0.050278, 'P9': 0.018830, 'P10': -0.084299 };
+g_spherePositions['11P'] = { 'name': '11P', 'color': 0, 'x': 0.179546, 'y': 0.159443, 'z': -0.075657, 'P1': 0.179546, 'P2': 0.159443, 'P3': -0.075657, 'P4': -0.230847, 'P5': -0.093447, 'P6': -0.136765, 'P7': 0.112235, 'P8': 0.128429, 'P9': -0.056643, 'P10': 0.100709 };
+g_spherePositions['11S'] = { 'name': '11S', 'color': 0, 'x': 0.174357, 'y': 0.065814, 'z': 0.015946, 'P1': 0.174357, 'P2': 0.065814, 'P3': 0.015946, 'P4': -0.085633, 'P5': 0.253863, 'P6': 0.260205, 'P7': 0.137536, 'P8': 0.083806, 'P9': 0.042857, 'P10': -0.048564 };
+g_spherePositions['8S'] = { 'name': '8S', 'color': 0, 'x': 0.208271, 'y': 0.044353, 'z': 0.030032, 'P1': 0.208271, 'P2': 0.044353, 'P3': 0.030032, 'P4': -0.087168, 'P5': 0.265386, 'P6': 0.201672, 'P7': 0.090437, 'P8': 0.053997, 'P9': 0.054342, 'P10': -0.042379 };
+g_spherePositions['Nl18Post1'] = { 'name': 'Nl18Post1', 'color': 0, 'x': -0.160479, 'y': -0.164003, 'z': 0.150491, 'P1': -0.160479, 'P2': -0.164003, 'P3': 0.150491, 'P4': -0.054235, 'P5': -0.025537, 'P6': -0.005009, 'P7': 0.033000, 'P8': -0.100229, 'P9': -0.065155, 'P10': 0.056287 };
+g_spherePositions['Nl18Post2'] = { 'name': 'Nl18Post2', 'color': 0, 'x': 0.107181, 'y': -0.388142, 'z': -0.120942, 'P1': 0.107181, 'P2': -0.388142, 'P3': -0.120942, 'P4': 0.061077, 'P5': -0.176793, 'P6': 0.106656, 'P7': 0.005948, 'P8': 0.045263, 'P9': -0.046241, 'P10': -0.000863 };
+g_spherePositions['1P'] = { 'name': '1P', 'color': 0, 'x': 0.253472, 'y': -0.361389, 'z': -0.164448, 'P1': 0.253472, 'P2': -0.361389, 'P3': -0.164448, 'P4': 0.021409, 'P5': -0.196631, 'P6': 0.084509, 'P7': -0.037648, 'P8': 0.062061, 'P9': 0.075555, 'P10': -0.055206 };
+g_spherePositions['1S'] = { 'name': '1S', 'color': 0, 'x': 0.228954, 'y': -0.112564, 'z': 0.011426, 'P1': 0.228954, 'P2': -0.112564, 'P3': 0.011426, 'P4': -0.041629, 'P5': 0.175070, 'P6': 0.288446, 'P7': 0.051934, 'P8': 0.000351, 'P9': 0.006834, 'P10': -0.021784 };
+g_spherePositions['Ax16Post1'] = { 'name': 'Ax16Post1', 'color': 0, 'x': -0.071922, 'y': -0.134409, 'z': 0.121724, 'P1': -0.071922, 'P2': -0.134409, 'P3': 0.121724, 'P4': -0.036884, 'P5': 0.060673, 'P6': 0.071534, 'P7': 0.011307, 'P8': -0.030206, 'P9': -0.037372, 'P10': 0.019368 };
+g_spherePositions['Ax16Post3'] = { 'name': 'Ax16Post3', 'color': 0, 'x': -0.124993, 'y': 0.163725, 'z': -0.172818, 'P1': -0.124993, 'P2': 0.163725, 'P3': -0.172818, 'P4': 0.074875, 'P5': -0.028437, 'P6': 0.034109, 'P7': -0.026905, 'P8': 0.014427, 'P9': -0.060694, 'P10': -0.031178 };
+g_spherePositions['Ax16Post2'] = { 'name': 'Ax16Post2', 'color': 0, 'x': -0.184205, 'y': -0.036424, 'z': 0.139098, 'P1': -0.184205, 'P2': -0.036424, 'P3': 0.139098, 'P4': -0.046787, 'P5': -0.028151, 'P6': -0.062874, 'P7': 0.052162, 'P8': 0.047307, 'P9': 0.102273, 'P10': -0.006770 };
+g_spherePositions['1A'] = { 'name': '1A', 'color': 0, 'x': 0.217701, 'y': 0.217824, 'z': 0.058678, 'P1': 0.217701, 'P2': 0.217824, 'P3': 0.058678, 'P4': -0.225749, 'P5': -0.089659, 'P6': 0.016614, 'P7': -0.026973, 'P8': -0.068110, 'P9': 0.045516, 'P10': -0.034474 };
+g_spherePositions['10M1'] = { 'name': '10M1', 'color': 0, 'x': 0.180752, 'y': 0.170535, 'z': 0.062759, 'P1': 0.180752, 'P2': 0.170535, 'P3': 0.062759, 'P4': -0.193642, 'P5': -0.028154, 'P6': 0.055019, 'P7': -0.099052, 'P8': -0.111022, 'P9': -0.009982, 'P10': -0.100769 };
+g_spherePositions['10M2'] = { 'name': '10M2', 'color': 0, 'x': 0.188741, 'y': 0.081306, 'z': 0.032202, 'P1': 0.188741, 'P2': 0.081306, 'P3': 0.032202, 'P4': -0.208034, 'P5': -0.042796, 'P6': 0.040149, 'P7': -0.064063, 'P8': -0.116903, 'P9': -0.109646, 'P10': -0.028435 };
+g_spherePositions['Ax16Esophagus'] = { 'name': 'Ax16Esophagus', 'color': 0, 'x': -0.163861, 'y': -0.066583, 'z': 0.143673, 'P1': -0.163861, 'P2': -0.066583, 'P3': 0.143673, 'P4': -0.021582, 'P5': 0.020439, 'P6': -0.016605, 'P7': 0.023378, 'P8': 0.007470, 'P9': 0.092225, 'P10': 0.003015 };
+g_spherePositions['9A'] = { 'name': '9A', 'color': 0, 'x': 0.215293, 'y': -0.134402, 'z': -0.063386, 'P1': 0.215293, 'P2': -0.134402, 'P3': -0.063386, 'P4': -0.032346, 'P5': 0.291482, 'P6': 0.026865, 'P7': -0.081755, 'P8': -0.023099, 'P9': 0.109561, 'P10': 0.092389 };
+g_spherePositions['Nl19Ant1'] = { 'name': 'Nl19Ant1', 'color': 0, 'x': -0.016027, 'y': -0.267792, 'z': 0.087220, 'P1': -0.016027, 'P2': -0.267792, 'P3': 0.087220, 'P4': -0.011790, 'P5': -0.087428, 'P6': 0.062301, 'P7': 0.005460, 'P8': -0.106855, 'P9': -0.113431, 'P10': 0.064050 };
+g_spherePositions['3AbStomach'] = { 'name': '3AbStomach', 'color': 0, 'x': -0.204406, 'y': 0.088771, 'z': -0.065503, 'P1': -0.204406, 'P2': 0.088771, 'P3': -0.065503, 'P4': 0.052780, 'P5': -0.037184, 'P6': -0.012115, 'P7': 0.022754, 'P8': 0.030677, 'P9': -0.039380, 'P10': -0.152400 };
+g_spherePositions['9S'] = { 'name': '9S', 'color': 0, 'x': 0.203161, 'y': -0.029420, 'z': -0.017388, 'P1': 0.203161, 'P2': -0.029420, 'P3': -0.017388, 'P4': -0.003290, 'P5': 0.307012, 'P6': 0.204769, 'P7': 0.183408, 'P8': 0.118662, 'P9': 0.063852, 'P10': 0.039639 };
+g_spherePositions['Nl18Stomach'] = { 'name': 'Nl18Stomach', 'color': 0, 'x': -0.173350, 'y': -0.098524, 'z': 0.134856, 'P1': -0.173350, 'P2': -0.098524, 'P3': 0.134856, 'P4': -0.024014, 'P5': 0.014458, 'P6': -0.020988, 'P7': 0.052983, 'P8': 0.038659, 'P9': 0.048601, 'P10': 0.037416 };
+g_spherePositions['Nl19Mid2'] = { 'name': 'Nl19Mid2', 'color': 0, 'x': -0.163550, 'y': -0.066077, 'z': 0.158650, 'P1': -0.163550, 'P2': -0.066077, 'P3': 0.158650, 'P4': -0.035963, 'P5': -0.024087, 'P6': -0.026692, 'P7': 0.085480, 'P8': 0.003390, 'P9': -0.036061, 'P10': 0.007408 };
+g_spherePositions['Nl19Mid1'] = { 'name': 'Nl19Mid1', 'color': 0, 'x': -0.142651, 'y': -0.083386, 'z': 0.125157, 'P1': -0.142651, 'P2': -0.083386, 'P3': 0.125157, 'P4': -0.026548, 'P5': -0.005863, 'P6': 0.037669, 'P7': -0.046607, 'P8': -0.104124, 'P9': -0.014057, 'P10': 0.005853 };
+g_spherePositions['3Abmid1'] = { 'name': '3Abmid1', 'color': 0, 'x': -0.116788, 'y': 0.055663, 'z': -0.045013, 'P1': -0.116788, 'P2': 0.055663, 'P3': -0.045013, 'P4': 0.023990, 'P5': -0.061426, 'P6': -0.094572, 'P7': 0.126430, 'P8': 0.195788, 'P9': -0.071355, 'P10': -0.065716 };
+g_spherePositions['At4Ant1'] = { 'name': 'At4Ant1', 'color': 0, 'x': -0.169076, 'y': 0.078844, 'z': -0.007235, 'P1': -0.169076, 'P2': 0.078844, 'P3': -0.007235, 'P4': -0.014308, 'P5': -0.005257, 'P6': 0.000553, 'P7': -0.058984, 'P8': 0.090229, 'P9': 0.005578, 'P10': -0.018660 };
+g_spherePositions['Zf5Ant2'] = { 'name': 'Zf5Ant2', 'color': 0, 'x': -0.194939, 'y': 0.105585, 'z': -0.067921, 'P1': -0.194939, 'P2': 0.105585, 'P3': -0.067921, 'P4': 0.044682, 'P5': -0.031875, 'P6': 0.002633, 'P7': -0.068623, 'P8': 0.060857, 'P9': 0.060349, 'P10': 0.027709 };
+g_spherePositions['13A2'] = { 'name': '13A2', 'color': 0, 'x': 0.136152, 'y': 0.192421, 'z': -0.001505, 'P1': 0.136152, 'P2': 0.192421, 'P3': -0.001505, 'P4': -0.217891, 'P5': -0.026668, 'P6': 0.038502, 'P7': -0.038978, 'P8': -0.036441, 'P9': -0.004237, 'P10': -0.055005 };
+g_spherePositions['Zf5Mid2'] = { 'name': 'Zf5Mid2', 'color': 0, 'x': -0.173014, 'y': 0.072577, 'z': 0.004595, 'P1': -0.173014, 'P2': 0.072577, 'P3': 0.004595, 'P4': 0.014185, 'P5': -0.004969, 'P6': 0.010612, 'P7': -0.131248, 'P8': 0.081627, 'P9': 0.066911, 'P10': 0.087413 };
+g_spherePositions['Nl17Mid1'] = { 'name': 'Nl17Mid1', 'color': 0, 'x': -0.141403, 'y': -0.133129, 'z': 0.138462, 'P1': -0.141403, 'P2': -0.133129, 'P3': 0.138462, 'P4': -0.031701, 'P5': -0.002604, 'P6': 0.022163, 'P7': 0.040317, 'P8': -0.110555, 'P9': -0.127408, 'P10': 0.017587 };
+g_spherePositions['Nl17Mid2'] = { 'name': 'Nl17Mid2', 'color': 0, 'x': -0.041370, 'y': -0.185967, 'z': 0.118550, 'P1': -0.041370, 'P2': -0.185967, 'P3': 0.118550, 'P4': -0.028654, 'P5': -0.050323, 'P6': 0.051776, 'P7': 0.000501, 'P8': -0.090758, 'P9': -0.071113, 'P10': 0.087513 };
+g_spherePositions['Nu15Post1'] = { 'name': 'Nu15Post1', 'color': 0, 'x': 0.081542, 'y': -0.371697, 'z': -0.100706, 'P1': 0.081542, 'P2': -0.371697, 'P3': -0.100706, 'P4': 0.039296, 'P5': -0.171741, 'P6': 0.101563, 'P7': -0.026028, 'P8': 0.013577, 'P9': -0.082496, 'P10': 0.000149 };
+g_spherePositions['Nu15Post2'] = { 'name': 'Nu15Post2', 'color': 0, 'x': -0.194294, 'y': -0.050694, 'z': 0.147136, 'P1': -0.194294, 'P2': -0.050694, 'P3': 0.147136, 'P4': -0.029180, 'P5': -0.024355, 'P6': -0.057939, 'P7': 0.063278, 'P8': 0.018309, 'P9': 0.095433, 'P10': -0.030295 };
+g_spherePositions['Al12Esophagus'] = { 'name': 'Al12Esophagus', 'color': 0, 'x': -0.110966, 'y': 0.075797, 'z': -0.143930, 'P1': -0.110966, 'P2': 0.075797, 'P3': -0.143930, 'P4': 0.054912, 'P5': 0.020650, 'P6': -0.048786, 'P7': 0.014109, 'P8': -0.032429, 'P9': -0.060219, 'P10': -0.079887 };
+g_spherePositions['6A'] = { 'name': '6A', 'color': 0, 'x': 0.219870, 'y': 0.169316, 'z': 0.097667, 'P1': 0.219870, 'P2': 0.169316, 'P3': 0.097667, 'P4': -0.149990, 'P5': 0.016728, 'P6': 0.082489, 'P7': -0.078352, 'P8': -0.075815, 'P9': 0.021991, 'P10': -0.071925 };
+g_spherePositions['Ax16Mid2'] = { 'name': 'Ax16Mid2', 'color': 0, 'x': -0.166275, 'y': -0.068667, 'z': 0.164118, 'P1': -0.166275, 'P2': -0.068667, 'P3': 0.164118, 'P4': -0.038513, 'P5': -0.001492, 'P6': -0.048632, 'P7': 0.038359, 'P8': -0.010181, 'P9': 0.030858, 'P10': -0.022012 };
+g_spherePositions['13P1'] = { 'name': '13P1', 'color': 0, 'x': 0.174001, 'y': 0.065822, 'z': -0.002406, 'P1': 0.174001, 'P2': 0.065822, 'P3': -0.002406, 'P4': -0.200945, 'P5': -0.035208, 'P6': 0.018986, 'P7': -0.094270, 'P8': -0.095903, 'P9': -0.056309, 'P10': -0.008715 };
+g_spherePositions['13P2'] = { 'name': '13P2', 'color': 0, 'x': 0.256210, 'y': -0.398004, 'z': -0.180457, 'P1': 0.256210, 'P2': -0.398004, 'P3': -0.180457, 'P4': 0.040456, 'P5': -0.222790, 'P6': 0.085420, 'P7': -0.025064, 'P8': 0.087501, 'P9': 0.077449, 'P10': -0.050161 };
+g_spherePositions['12M2'] = { 'name': '12M2', 'color': 0, 'x': 0.192693, 'y': -0.146940, 'z': -0.138414, 'P1': 0.192693, 'P2': -0.146940, 'P3': -0.138414, 'P4': -0.031501, 'P5': 0.190937, 'P6': -0.213486, 'P7': 0.013976, 'P8': -0.012730, 'P9': -0.068366, 'P10': -0.141666 };
+g_spherePositions['8M'] = { 'name': '8M', 'color': 0, 'x': 0.182805, 'y': -0.052660, 'z': -0.018183, 'P1': 0.182805, 'P2': -0.052660, 'P3': -0.018183, 'P4': -0.143910, 'P5': 0.160214, 'P6': -0.065396, 'P7': -0.106526, 'P8': -0.093625, 'P9': 0.012072, 'P10': 0.043395 };
+g_spherePositions['12P1'] = { 'name': '12P1', 'color': 0, 'x': 0.126853, 'y': 0.055765, 'z': 0.003848, 'P1': 0.126853, 'P2': 0.055765, 'P3': 0.003848, 'P4': -0.189267, 'P5': 0.041528, 'P6': -0.070569, 'P7': -0.074782, 'P8': -0.077601, 'P9': -0.039298, 'P10': -0.115822 };
+g_spherePositions['MG1'] = { 'name': 'MG1', 'color': 0, 'x': 0.375665, 'y': 0.160511, 'z': 0.313028, 'P1': 0.375665, 'P2': 0.160511, 'P3': 0.313028, 'P4': 0.374264, 'P5': -0.061902, 'P6': -0.051341, 'P7': -0.011378, 'P8': 0.019401, 'P9': -0.018308, 'P10': 0.006585 };
+g_spherePositions['Nl18Mid1'] = { 'name': 'Nl18Mid1', 'color': 0, 'x': -0.148360, 'y': 0.148308, 'z': -0.169485, 'P1': -0.148360, 'P2': 0.148308, 'P3': -0.169485, 'P4': 0.099054, 'P5': -0.061404, 'P6': -0.004302, 'P7': 0.038178, 'P8': 0.039548, 'P9': -0.025383, 'P10': -0.067736 };
+g_spherePositions['12P2'] = { 'name': '12P2', 'color': 0, 'x': 0.237156, 'y': -0.293545, 'z': -0.171838, 'P1': 0.237156, 'P2': -0.293545, 'P3': -0.171838, 'P4': 0.048013, 'P5': 0.134845, 'P6': -0.245844, 'P7': -0.031931, 'P8': -0.005384, 'P9': 0.060798, 'P10': -0.041799 };
+g_spherePositions['11M'] = { 'name': '11M', 'color': 0, 'x': 0.374407, 'y': 0.155338, 'z': 0.308664, 'P1': 0.374407, 'P2': 0.155338, 'P3': 0.308664, 'P4': 0.380600, 'P5': -0.051301, 'P6': -0.052420, 'P7': -0.010332, 'P8': 0.024326, 'P9': -0.018917, 'P10': 0.009657 };
+g_spherePositions['Nl19Post1'] = { 'name': 'Nl19Post1', 'color': 0, 'x': -0.119427, 'y': -0.214516, 'z': 0.097337, 'P1': -0.119427, 'P2': -0.214516, 'P3': 0.097337, 'P4': -0.017054, 'P5': -0.027830, 'P6': 0.036110, 'P7': 0.033831, 'P8': -0.092588, 'P9': -0.177553, 'P10': 0.095497 };
+g_spherePositions['6S'] = { 'name': '6S', 'color': 0, 'x': 0.175718, 'y': 0.209988, 'z': -0.034298, 'P1': 0.175718, 'P2': 0.209988, 'P3': -0.034298, 'P4': -0.258345, 'P5': -0.129245, 'P6': -0.096168, 'P7': 0.088779, 'P8': 0.124464, 'P9': 0.001608, 'P10': 0.118614 };
+g_spherePositions['3P1'] = { 'name': '3P1', 'color': 0, 'x': 0.231834, 'y': -0.333712, 'z': -0.136795, 'P1': 0.231834, 'P2': -0.333712, 'P3': -0.136795, 'P4': -0.021930, 'P5': -0.163501, 'P6': 0.037841, 'P7': 0.000590, 'P8': 0.014205, 'P9': -0.062268, 'P10': 0.025795 };
+g_spherePositions['6M1'] = { 'name': '6M1', 'color': 0, 'x': 0.224183, 'y': 0.232642, 'z': 0.010767, 'P1': 0.224183, 'P2': 0.232642, 'P3': 0.010767, 'P4': -0.220678, 'P5': -0.112824, 'P6': -0.018602, 'P7': 0.005161, 'P8': 0.009557, 'P9': 0.043836, 'P10': 0.062775 };
+g_spherePositions['Al12Post2'] = { 'name': 'Al12Post2', 'color': 0, 'x': -0.049032, 'y': -0.056861, 'z': -0.145284, 'P1': -0.049032, 'P2': -0.056861, 'P3': -0.145284, 'P4': 0.080081, 'P5': 0.159597, 'P6': -0.051698, 'P7': -0.071691, 'P8': -0.025051, 'P9': -0.122529, 'P10': 0.004655 };
+g_spherePositions['An10Mid'] = { 'name': 'An10Mid', 'color': 0, 'x': -0.156785, 'y': 0.125534, 'z': -0.154367, 'P1': -0.156785, 'P2': 0.125534, 'P3': -0.154367, 'P4': 0.100827, 'P5': -0.025451, 'P6': 0.011904, 'P7': 0.018862, 'P8': 0.035407, 'P9': -0.055452, 'P10': -0.084087 };
+g_spherePositions['At14Ant2'] = { 'name': 'At14Ant2', 'color': 0, 'x': -0.093266, 'y': -0.263405, 'z': 0.089326, 'P1': -0.093266, 'P2': -0.263405, 'P3': 0.089326, 'P4': -0.013883, 'P5': -0.079759, 'P6': 0.026112, 'P7': 0.010203, 'P8': -0.071593, 'P9': -0.015266, 'P10': 0.058527 };
+g_spherePositions['At14Mid2'] = { 'name': 'At14Mid2', 'color': 0, 'x': -0.209480, 'y': -0.003398, 'z': 0.087677, 'P1': -0.209480, 'P2': -0.003398, 'P3': 0.087677, 'P4': -0.013082, 'P5': -0.001386, 'P6': -0.026524, 'P7': -0.025631, 'P8': 0.045623, 'P9': 0.105773, 'P10': 0.012292 };
+g_spherePositions['At14Mid1'] = { 'name': 'At14Mid1', 'color': 0, 'x': -0.190943, 'y': -0.037067, 'z': 0.139303, 'P1': -0.190943, 'P2': -0.037067, 'P3': 0.139303, 'P4': -0.021362, 'P5': -0.013205, 'P6': -0.026939, 'P7': 0.002577, 'P8': 0.023933, 'P9': 0.097986, 'P10': 0.001354 };
+g_spherePositions['Zv6Ant1'] = { 'name': 'Zv6Ant1', 'color': 0, 'x': -0.098816, 'y': 0.176526, 'z': -0.203698, 'P1': -0.098816, 'P2': 0.176526, 'P3': -0.203698, 'P4': 0.119380, 'P5': -0.046067, 'P6': 0.014556, 'P7': 0.012877, 'P8': -0.026764, 'P9': 0.069951, 'P10': 0.055475 };
+g_spherePositions['Al11Ant1'] = { 'name': 'Al11Ant1', 'color': 0, 'x': -0.024623, 'y': 0.170652, 'z': -0.225636, 'P1': -0.024623, 'P2': 0.170652, 'P3': -0.225636, 'P4': 0.143097, 'P5': -0.030894, 'P6': 0.037729, 'P7': 0.221246, 'P8': -0.164577, 'P9': 0.102463, 'P10': -0.058205 };
+g_spherePositions['Al11Ant2'] = { 'name': 'Al11Ant2', 'color': 0, 'x': 0.003888, 'y': 0.152844, 'z': -0.216548, 'P1': 0.003888, 'P2': 0.152844, 'P3': -0.216548, 'P4': 0.109705, 'P5': -0.037253, 'P6': 0.018261, 'P7': 0.220195, 'P8': -0.166000, 'P9': 0.073676, 'P10': -0.064955 };
+g_spherePositions['At14Post1'] = { 'name': 'At14Post1', 'color': 0, 'x': -0.155012, 'y': 0.064954, 'z': -0.118844, 'P1': -0.155012, 'P2': 0.064954, 'P3': -0.118844, 'P4': 0.054825, 'P5': 0.031890, 'P6': -0.030495, 'P7': -0.074249, 'P8': -0.052993, 'P9': -0.091126, 'P10': -0.101859 };
+g_spherePositions['Nu15Stomach'] = { 'name': 'Nu15Stomach', 'color': 0, 'x': -0.156548, 'y': -0.045484, 'z': 0.177439, 'P1': -0.156548, 'P2': -0.045484, 'P3': 0.177439, 'P4': -0.036827, 'P5': 0.038207, 'P6': 0.038058, 'P7': 0.052610, 'P8': -0.027418, 'P9': 0.044258, 'P10': -0.018216 };
+g_spherePositions['At14Stomach'] = { 'name': 'At14Stomach', 'color': 0, 'x': -0.184264, 'y': -0.055082, 'z': 0.125074, 'P1': -0.184264, 'P2': -0.055082, 'P3': 0.125074, 'P4': -0.023720, 'P5': 0.015951, 'P6': -0.022767, 'P7': 0.058025, 'P8': 0.083630, 'P9': 0.087555, 'P10': 0.000370 };
+g_spherePositions['Nu1post2'] = { 'name': 'Nu1post2', 'color': 0, 'x': -0.236237, 'y': -0.041228, 'z': 0.151283, 'P1': -0.236237, 'P2': -0.041228, 'P3': 0.151283, 'P4': -0.042501, 'P5': -0.032078, 'P6': -0.069919, 'P7': 0.071180, 'P8': 0.046649, 'P9': 0.059204, 'P10': -0.017974 };
+g_spherePositions['Nu1post3'] = { 'name': 'Nu1post3', 'color': 0, 'x': -0.240870, 'y': -0.051183, 'z': 0.150643, 'P1': -0.240870, 'P2': -0.051183, 'P3': 0.150643, 'P4': -0.027271, 'P5': -0.018668, 'P6': -0.053470, 'P7': 0.030715, 'P8': 0.021848, 'P9': 0.061971, 'P10': -0.004388 };
+g_spherePositions['An9Post2'] = { 'name': 'An9Post2', 'color': 0, 'x': -0.083968, 'y': 0.144779, 'z': -0.233947, 'P1': -0.083968, 'P2': 0.144779, 'P3': -0.233947, 'P4': 0.154864, 'P5': -0.011461, 'P6': 0.008887, 'P7': 0.072757, 'P8': -0.068916, 'P9': 0.010541, 'P10': 0.031176 };
+g_spherePositions['Nu1post1'] = { 'name': 'Nu1post1', 'color': 0, 'x': 0.033117, 'y': 0.111597, 'z': -0.223382, 'P1': 0.033117, 'P2': 0.111597, 'P3': -0.223382, 'P4': 0.125604, 'P5': -0.044965, 'P6': 0.007847, 'P7': 0.111457, 'P8': -0.146590, 'P9': 0.003442, 'P10': 0.151686 };
+g_spherePositions['HG1'] = { 'name': 'HG1', 'color': 0, 'x': 0.155998, 'y': -0.065403, 'z': -0.108317, 'P1': 0.155998, 'P2': -0.065403, 'P3': -0.108317, 'P4': -0.068170, 'P5': 0.107972, 'P6': -0.282509, 'P7': 0.046148, 'P8': 0.042324, 'P9': -0.049141, 'P10': -0.040004 };
+g_spherePositions['7S'] = { 'name': '7S', 'color': 0, 'x': 0.202979, 'y': 0.189107, 'z': 0.008822, 'P1': 0.202979, 'P2': 0.189107, 'P3': 0.008822, 'P4': -0.241610, 'P5': -0.022392, 'P6': 0.021426, 'P7': 0.059631, 'P8': 0.052173, 'P9': -0.006469, 'P10': 0.031808 };
+g_spherePositions['Nl8Esophagus'] = { 'name': 'Nl8Esophagus', 'color': 0, 'x': -0.207276, 'y': 0.080235, 'z': -0.064645, 'P1': -0.207276, 'P2': 0.080235, 'P3': -0.064645, 'P4': 0.055758, 'P5': -0.000261, 'P6': 0.026066, 'P7': -0.052556, 'P8': -0.063501, 'P9': -0.000385, 'P10': -0.075429 };
+g_spherePositions['3Abpost1'] = { 'name': '3Abpost1', 'color': 0, 'x': -0.202516, 'y': 0.031015, 'z': 0.038415, 'P1': -0.202516, 'P2': 0.031015, 'P3': 0.038415, 'P4': -0.014717, 'P5': -0.031188, 'P6': -0.031999, 'P7': 0.010903, 'P8': 0.045665, 'P9': -0.053258, 'P10': -0.104844 };
+g_spherePositions['Al11Mid1'] = { 'name': 'Al11Mid1', 'color': 0, 'x': -0.212359, 'y': 0.082264, 'z': -0.053385, 'P1': -0.212359, 'P2': 0.082264, 'P3': -0.053385, 'P4': 0.055004, 'P5': -0.021496, 'P6': -0.006504, 'P7': 0.007566, 'P8': -0.013048, 'P9': 0.006715, 'P10': -0.086228 };
+g_spherePositions['Ao20Ant1'] = { 'name': 'Ao20Ant1', 'color': 0, 'x': -0.184992, 'y': -0.040664, 'z': 0.186672, 'P1': -0.184992, 'P2': -0.040664, 'P3': 0.186672, 'P4': -0.050436, 'P5': -0.012259, 'P6': -0.028949, 'P7': 0.007636, 'P8': -0.020391, 'P9': 0.094110, 'P10': -0.014169 };
+g_spherePositions['Nu15Ant1'] = { 'name': 'Nu15Ant1', 'color': 0, 'x': -0.168790, 'y': -0.058747, 'z': 0.166891, 'P1': -0.168790, 'P2': -0.058747, 'P3': 0.166891, 'P4': -0.042930, 'P5': -0.006834, 'P6': -0.014821, 'P7': 0.030538, 'P8': 0.032482, 'P9': 0.076974, 'P10': 0.029795 };
+g_spherePositions['10A2'] = { 'name': '10A2', 'color': 0, 'x': 0.133115, 'y': 0.192724, 'z': -0.002175, 'P1': 0.133115, 'P2': 0.192724, 'P3': -0.002175, 'P4': -0.201471, 'P5': -0.104375, 'P6': -0.083015, 'P7': 0.080480, 'P8': 0.101010, 'P9': 0.006235, 'P10': 0.050899 };
+g_spherePositions['3AbAnt1'] = { 'name': '3AbAnt1', 'color': 0, 'x': -0.228714, 'y': -0.023098, 'z': 0.100734, 'P1': -0.228714, 'P2': -0.023098, 'P3': 0.100734, 'P4': 0.001772, 'P5': -0.004781, 'P6': -0.053690, 'P7': 0.031106, 'P8': 0.018044, 'P9': 0.090481, 'P10': -0.027181 };
+g_spherePositions['7A2'] = { 'name': '7A2', 'color': 0, 'x': 0.189960, 'y': 0.015466, 'z': -0.018804, 'P1': 0.189960, 'P2': 0.015466, 'P3': -0.018804, 'P4': -0.049959, 'P5': 0.316280, 'P6': 0.169562, 'P7': 0.035024, 'P8': 0.066833, 'P9': 0.001802, 'P10': -0.002971 };
+g_spherePositions['7A1'] = { 'name': '7A1', 'color': 0, 'x': 0.196840, 'y': 0.234949, 'z': 0.015731, 'P1': 0.196840, 'P2': 0.234949, 'P3': 0.015731, 'P4': -0.237021, 'P5': -0.088831, 'P6': 0.002948, 'P7': -0.057737, 'P8': -0.010839, 'P9': 0.024333, 'P10': 0.005740 };
+g_spherePositions['Nu15Esophagus'] = { 'name': 'Nu15Esophagus', 'color': 0, 'x': -0.210972, 'y': -0.059284, 'z': 0.132519, 'P1': -0.210972, 'P2': -0.059284, 'P3': 0.132519, 'P4': -0.011556, 'P5': -0.000213, 'P6': -0.055605, 'P7': 0.035906, 'P8': -0.020130, 'P9': 0.060226, 'P10': -0.042438 };
+g_spherePositions['2M1'] = { 'name': '2M1', 'color': 0, 'x': 0.237303, 'y': 0.120722, 'z': 0.174426, 'P1': 0.237303, 'P2': 0.120722, 'P3': 0.174426, 'P4': 0.022322, 'P5': -0.000579, 'P6': 0.077241, 'P7': -0.116860, 'P8': -0.135892, 'P9': -0.010172, 'P10': -0.090909 };
+g_spherePositions['3AbMid2'] = { 'name': '3AbMid2', 'color': 0, 'x': -0.230560, 'y': 0.012680, 'z': 0.058368, 'P1': -0.230560, 'P2': 0.012680, 'P3': 0.058368, 'P4': 0.010468, 'P5': 0.004217, 'P6': -0.018792, 'P7': -0.005735, 'P8': 0.007263, 'P9': -0.020613, 'P10': -0.080243 };
+g_spherePositions['3P2'] = { 'name': '3P2', 'color': 0, 'x': 0.376231, 'y': 0.110815, 'z': 0.300839, 'P1': 0.376231, 'P2': 0.110815, 'P3': 0.300839, 'P4': 0.372713, 'P5': -0.059997, 'P6': -0.041840, 'P7': -0.018846, 'P8': 0.002869, 'P9': -0.036483, 'P10': 0.017827 };
+g_spherePositions['Nl18Ant1'] = { 'name': 'Nl18Ant1', 'color': 0, 'x': -0.220428, 'y': -0.111915, 'z': 0.157450, 'P1': -0.220428, 'P2': -0.111915, 'P3': 0.157450, 'P4': -0.036941, 'P5': 0.014382, 'P6': -0.013446, 'P7': 0.040290, 'P8': -0.045348, 'P9': 0.004490, 'P10': 0.016963 };
+g_spherePositions['Zv6Ant2'] = { 'name': 'Zv6Ant2', 'color': 0, 'x': -0.199963, 'y': 0.109932, 'z': -0.099454, 'P1': -0.199963, 'P2': 0.109932, 'P3': -0.099454, 'P4': 0.079941, 'P5': -0.025196, 'P6': 0.016144, 'P7': -0.112730, 'P8': 0.060313, 'P9': 0.005181, 'P10': 0.019361 };
+g_spherePositions['Ao20Esophagus'] = { 'name': 'Ao20Esophagus', 'color': 0, 'x': -0.121434, 'y': -0.114004, 'z': 0.159262, 'P1': -0.121434, 'P2': -0.114004, 'P3': 0.159262, 'P4': -0.040571, 'P5': 0.009466, 'P6': 0.002740, 'P7': -0.013024, 'P8': -0.107788, 'P9': -0.010593, 'P10': -0.008794 };
+g_spherePositions['At4Post2'] = { 'name': 'At4Post2', 'color': 0, 'x': -0.152105, 'y': 0.115391, 'z': -0.080569, 'P1': -0.152105, 'P2': 0.115391, 'P3': -0.080569, 'P4': 0.046863, 'P5': 0.001266, 'P6': 0.021778, 'P7': -0.157817, 'P8': 0.081093, 'P9': 0.011991, 'P10': 0.064816 };
+
+var g_ellipsesDimensions = new Array();
+var g_segments = 8, g_rings = 8, g_radius = 0.007475;
+var g_xAxisLength = 0.622916;
+var g_yAxisLength = 0.644324;
+var g_zAxisLength = 0.567606;
+var g_xMaximumValue = 0.382046;
+var g_yMaximumValue = 0.234949;
+var g_zMaximumValue = 0.313028;
+var g_xMinimumValue = -0.240870;
+var g_yMinimumValue = -0.409376;
+var g_zMinimumValue = -0.254579;
+var g_maximum = 0.409376;
+var g_pc1Label = "PC1 (10 %)";
+var g_pc2Label = "PC2 (7 %)";
+var g_pc3Label = "PC3 (5 %)";
+var g_number_of_custom_axes = 0;
+var g_fractionExplained = [0.099293, 0.073344, 0.053402, 0.046620, 0.030524, 0.022850, 0.015841, 0.015098, 0.013144, 0.011503];
+var g_fractionExplainedRounded = [10, 7, 5, 5, 3, 2, 2, 2, 1, 1];
+
+var g_taxaPositions = new Array();
+
+
+var g_vectorPositions = new Array();
+
+var g_comparisonPositions = new Array();
+var g_isSerialComparisonPlot = true;
+document.getElementById("logo").style.display = 'none';
+document.getElementById("logotable").style.display = 'none';
+
+ </script>
+</head>
+
+<body>
+
+<div id="overlay">
+    <div>
+    <img src="emperor_required_resources/img/emperor.png" alt="Emperor" id="smalllogo"/>
+        <h1>WebGL is not enabled!</h1>
+        <p>Emperor's visualization framework is WebGL based, it seems that your system doesn't have this resource available. Here is what you can do:</p>
+        <p id="explanation"><strong>Chrome:</strong> Type "chrome://flags/" into the address bar, then search for "Disable WebGL". Disable this option if you haven't already. <em>Note:</em> If you follow these steps and still don't see an image, go to "chrome://flags/" and then search for "Override software rendering list" and enable this option.</p>
+        <p id="explanation"><strong>Safari:</strong> Open Safari's menu and select Preferences. Click on the advanced tab, and then check "Show Developer" menu. Then open the "Developer" menu and select "Enable WebGL".</p>
+        <p id="explanation"><strong>Firefox:</strong> Go to Options through Firefox > Options or Tools > Options. Go to Advanced, then General. Check "Use hardware acceleration when available" and restart Firefox.</p>
+        <p id="explanation"><strong>Other browsers:</strong> The only browsers that support WebGL are Chrome, Safari, and Firefox. Please switch to these browsers when using Emperor.</p>
+        <p id="explanation"><em>Note:</em> Once you went through these changes, reload the page and it should work!</p>
+        <p id="source">Sources: Instructions for <a href="https://www.biodigitalhuman.com/home/enabling-webgl.html">Chrome and Safari</a>, and <a href="http://www.infewbytes.com/?p=144">Firefox</a></p>
+    </div>
+</div>
+
+<div id="plotToggle">
+    <form>
+      <div id="plottype">
+        <input id="pcoa" type="radio" id="pcoa" name="plottype" checked="checked" /><label for="pcoa">PCoA</label>
+        <input id="parallel" type="radio" id="parallel" name="plottype" /><label for="parallel">Parallel</label>
+      </div>
+    </form>
+</div>
+<div id="pcoaPlotWrapper" class="plotWrapper">
+    <label id="pointCount" class="ontop">
+    </label>
+
+    <div id="finder" class="arrow-right">
+    </div>
+
+    <div id="labels" class="unselectable">
+    </div>
+
+    <div id="taxalabels" class="unselectable">
+    </div>
+
+    <div id="axislabels" class="axislabels">
+    </div>
+
+    <div id="main_plot">
+    </div>
+</div>
+
+<div id="parallelPlotWrapper" class="plotWrapper">
+</div>
+
+<div class="separator" ondblclick="separatorDoubleClick()"></div>
+
+<div id="menu">
+    <div id="menutabs">
+        <ul>
+            <li><a href="#keytab">Key</a></li>
+            <li><a href="#colorby">Colors</a></li>
+            <li><a href="#showby">Visibility</a></li>
+            <li><a href="#scalingby">Scaling</a></li>
+            <li><a href="#labelby">Labels</a></li>
+            <li><a href="#axes">Axes</a></li>
+            <li><a href="#options">Options</a></li>
+        </ul>
+        <div id="keytab">
+            <form name="keyFilter">
+            <label>Filter  </label><input name="filterBox" id="searchBox" type="text" onkeyup="filterKey()"></input>
+            </form>
+            <div id="key">
+            </div>
+        </div>
+        <div id="colorby">
+            <br>
+            <input type="checkbox" onchange="toggleContinuousAndDiscreteColors(this)" id="discreteorcontinuouscolors" name="discreteorcontinuouscolors">  Use gradient colors</input>
+            <br><br>
+            <select id="colorbycombo" onchange="colorByMenuChanged()" size="3">
+            </select>
+            <div class="list" id="colorbylist">
+            </div>
+        </div>
+        <div id="showby" align="center">
+            <table width="100%">
+                <tr>
+                    <td align="center">
+                        <select id="showbycombo" onchange="showByMenuChanged()">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="list" id="showbylist" style="height:100%;width:100%">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 12px; padding-right:12px;">
+                        <br>
+                        <label for="sphereopacity" class="text">Global Sphere Opacity</label>
+                        <label id="sphereopacity" class="slidervalue"></label>
+                        <div id="sopacityslider" class="slider-range-max"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="scalingby" align="center">
+            <table width="100%">
+                <tr>
+                    <td align="center">
+                        <select id="scalingbycombo" onchange="scalingByMenuChanged()">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="list" id="scalingbylist" style="height:100%;width:100%">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 12px; padding-right:12px;">
+                        <br>
+                        <label for="sphereradius" class="text">Global Sphere Scale</label>
+                        <label id="sphereradius" class="slidervalue"></label>
+                        <div id="sradiusslider" class="slider-range-max"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="labelby">
+        <div id="labelsTop">
+            <form name="plotoptions">
+            <input type="checkbox" onClick="toggleLabels()">Samples Label Visibility</input>
+            </form>
+            <br>
+            <label for="labelopacity" class="text">Label Opacity</label>
+            <label id="labelopacity" class="slidervalue"></label>
+            <div id="lopacityslider" class="slider-range-max"></div>
+            <div id="labelColorHolder clearfix">
+            <table>
+                <tr><td><div id="labelColor" class="colorbox"></div></td><td><label>Master Label Color</label></td></tr>
+            </table></div>
+        </div>
+            <br>
+            <select id="labelcombo" onchange="labelMenuChanged()">
+            </select>
+            <div class="list" id="labellist">
+            </div>
+        </div>
+        <div id="axes">
+            <div id="pcoaaxes">
+                <div class="list" id="axeslist">
+                </div>
+            </div>
+        </div>
+        <div id="options">
+            <table>
+                <tr><td><div id="axeslabelscolor" class="colorbox" name="axeslabelscolor"></div></td><td title="Axes Labels Color">Axes Labels Color</td></tr>
+                <tr><td><div id="axescolor" class="colorbox" name="axescolor"></div></td><td title="Axes Color Title">Axes Color</td></tr>
+                <tr><td><div id="rendererbackgroundcolor" class="colorbox" name="rendererbackgroundcolor"></div></td><td title="Background Color Title">Background Color</td></tr>
+            </table>
+            <div id="pcoaviewoptions" class="">
+                <form name="settingsoptionscolor">
+                </form>
+                <div id="pcoaoptions" class="">
+                    <form name="settingsoptions">
+                        <input type="checkbox" onchange="toggleScaleCoordinates(this)" id="scale_checkbox" name="scale_checkbox">Scale coords by percent explained</input>
+                    </form>
+                </div>
+                <br><input id="reset" class="button" type="submit" value="Recenter Camera" style="" onClick="resetCamera()">
+                <br><br>
+                <hr class='section-break'>
+                <br>Filename <small>(only letters, numbers, ., - and _)</small>:
+                <br><input name="saveas_name" id="saveas_name" value="screenshot" type="text"/>
+                <br><input id="saveas_legends" class="checkbox" type="checkbox" style=""> Create legend
+                <input id="saveas" class="button" type="submit" value="Save as SVG" style="" onClick="saveSVG()"/>
+                <br><br>For a PNG, simply press 'ctrl+p'.
+                <div id="paralleloptions" class="">
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>  
+</div>
+</body>
+
+</html>

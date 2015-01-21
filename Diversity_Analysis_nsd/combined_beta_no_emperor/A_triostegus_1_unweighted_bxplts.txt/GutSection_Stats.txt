@@ -1,0 +1,36 @@
+# The tests of significance were performed using a two-sided Student's two-sample t-test.
+# Alternative hypothesis: Group 1 mean != Group 2 mean
+# The nonparametric p-values were calculated using 999 Monte Carlo permutations.
+# The nonparametric p-values contain the correct number of significant digits.
+# Entries marked with "N/A" could not be calculated because at least one of the groups
+# of distances was empty, both groups each contained only a single distance, or
+# the test could not be performed (e.g. no variance in groups with the same mean).
+Group 1	Group 2	t statistic	Parametric p-value	Parametric p-value (Bonferroni-corrected)	Nonparametric p-value	Nonparametric p-value (Bonferroni-corrected)
+middle vs. middle	posterior vs. posterior	N/A	N/A	N/A	N/A	N/A
+middle vs. middle	anterior vs. middle	0.670245678367	0.624091118887	1	0.686	1.000
+middle vs. middle	anterior vs. posterior	1.29370876934	0.418922231049	1	0.664	1.000
+middle vs. middle	anterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+middle vs. middle	middle vs. posterior	1.28436262014	0.289211854296	1	0.412	1.000
+middle vs. middle	middle vs. stomach	0.336007938025	0.793636031259	1	1.000	1.000
+middle vs. middle	posterior vs. stomach	-0.120819041546	0.923455218005	1	1.000	1.000
+posterior vs. posterior	anterior vs. middle	0.0834790757917	0.946978506342	1	1.000	1.000
+posterior vs. posterior	anterior vs. posterior	-0.833743701792	0.55756172832	1	0.640	1.000
+posterior vs. posterior	anterior vs. stomach	N/A	N/A	N/A	N/A	N/A
+posterior vs. posterior	middle vs. posterior	-0.328865869218	0.763876958035	1	0.604	1.000
+posterior vs. posterior	middle vs. stomach	-0.62006437017	0.646649146468	1	0.672	1.000
+posterior vs. posterior	posterior vs. stomach	-3.54672798254	0.17495331994	1	0.344	1.000
+anterior vs. middle	anterior vs. posterior	-0.523339071692	0.652944423191	1	1.000	1.000
+anterior vs. middle	anterior vs. stomach	-0.310978512984	0.808060319445	1	1.000	1.000
+anterior vs. middle	middle vs. posterior	-0.472784042772	0.661010172762	1	0.673	1.000
+anterior vs. middle	middle vs. stomach	-0.685002655615	0.564075174352	1	0.662	1.000
+anterior vs. middle	posterior vs. stomach	-1.17956507731	0.359477960787	1	0.324	1.000
+anterior vs. posterior	anterior vs. stomach	0.00889402951995	0.994338034243	1	1.000	1.000
+anterior vs. posterior	middle vs. posterior	0.419920534566	0.696117903388	1	0.734	1.000
+anterior vs. posterior	middle vs. stomach	-0.387666568521	0.735631138853	1	1.000	1.000
+anterior vs. posterior	posterior vs. stomach	-2.01398895426	0.181613006458	1	0.357	1.000
+anterior vs. stomach	middle vs. posterior	0.296610379395	0.786113525435	1	0.600	1.000
+anterior vs. stomach	middle vs. stomach	-0.249378801028	0.844413998365	1	1.000	1.000
+anterior vs. stomach	posterior vs. stomach	-2.21844455174	0.269602733331	1	0.331	1.000
+middle vs. posterior	middle vs. stomach	-0.799138935942	0.468972907687	1	0.478	1.000
+middle vs. posterior	posterior vs. stomach	-1.94055496904	0.124298079566	1	0.283	1.000
+middle vs. stomach	posterior vs. stomach	-0.616813897778	0.600217515607	1	1.000	1.000

@@ -1,0 +1,3 @@
+middle_vs._posterior	1.12596649827
+middle_vs._stomach	0.685051663923
+posterior_vs._stomach	1.00639413294

@@ -1,0 +1,18 @@
+# The tests of significance were performed using a two-sided Student's two-sample t-test.
+# Alternative hypothesis: Group 1 mean != Group 2 mean
+# The nonparametric p-values were calculated using 999 Monte Carlo permutations.
+# The nonparametric p-values contain the correct number of significant digits.
+# Entries marked with "N/A" could not be calculated because at least one of the groups
+# of distances was empty, both groups each contained only a single distance, or
+# the test could not be performed (e.g. no variance in groups with the same mean).
+Group 1	Group 2	t statistic	Parametric p-value	Parametric p-value (Bonferroni-corrected)	Nonparametric p-value	Nonparametric p-value (Bonferroni-corrected)
+anterior vs. anterior	middle vs. middle	N/A	N/A	N/A	N/A	N/A
+anterior vs. anterior	anterior vs. middle	-0.51138100848	0.644344399823	1	0.511	1.000
+anterior vs. anterior	anterior vs. esophagus	0.171638545906	0.891785940737	1	1.000	1.000
+anterior vs. anterior	middle vs. esophagus	-0.549221608921	0.680260646892	1	1.000	1.000
+middle vs. middle	anterior vs. middle	1.52775006728	0.224027499958	1	0.115	1.000
+middle vs. middle	anterior vs. esophagus	1.66735568853	0.343925662635	1	0.694	1.000
+middle vs. middle	middle vs. esophagus	0.68784899923	0.616421121273	1	0.685	1.000
+anterior vs. middle	anterior vs. esophagus	0.902360503137	0.417890266204	1	0.500	1.000
+anterior vs. middle	middle vs. esophagus	-0.443309644614	0.680463262417	1	0.764	1.000
+anterior vs. esophagus	middle vs. esophagus	-0.922515355084	0.453648221461	1	0.660	1.000

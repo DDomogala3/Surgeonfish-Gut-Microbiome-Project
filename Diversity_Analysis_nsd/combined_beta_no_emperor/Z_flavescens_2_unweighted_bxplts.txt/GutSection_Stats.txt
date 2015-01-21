@@ -1,0 +1,74 @@
+# The tests of significance were performed using a two-sided Student's two-sample t-test.
+# Alternative hypothesis: Group 1 mean != Group 2 mean
+# The nonparametric p-values were calculated using 999 Monte Carlo permutations.
+# The nonparametric p-values contain the correct number of significant digits.
+# Entries marked with "N/A" could not be calculated because at least one of the groups
+# of distances was empty, both groups each contained only a single distance, or
+# the test could not be performed (e.g. no variance in groups with the same mean).
+Group 1	Group 2	t statistic	Parametric p-value	Parametric p-value (Bonferroni-corrected)	Nonparametric p-value	Nonparametric p-value (Bonferroni-corrected)
+anterior vs. anterior	posterior vs. posterior	-5.95437785537	0.0270652427755	1	0.251	1.000
+anterior vs. anterior	anterior vs. middle	-3.16426718677	0.194867151955	1	0.361	1.000
+anterior vs. anterior	anterior vs. posterior	-2.59978848532	0.0482617969965	1	0.087	1.000
+anterior vs. anterior	anterior vs. stomach	-8.33889231002	0.0759806111868	1	0.327	1.000
+anterior vs. anterior	anterior vs. esophagus	-151.149482227	0.00421179401168	0.252707640701	0.354	1.000
+anterior vs. anterior	middle vs. posterior	-0.898022889939	0.463945272601	1	0.924	1.000
+anterior vs. anterior	middle vs. stomach	N/A	N/A	N/A	N/A	N/A
+anterior vs. anterior	middle vs. esophagus	N/A	N/A	N/A	N/A	N/A
+anterior vs. anterior	posterior vs. stomach	-5.43964753991	0.0321733857158	1	0.263	1.000
+anterior vs. anterior	posterior vs. esophagus	-10.1627564978	0.00954387691356	0.572632614814	0.256	1.000
+anterior vs. anterior	stomach vs. esophagus	N/A	N/A	N/A	N/A	N/A
+posterior vs. posterior	anterior vs. middle	-0.0457019246948	0.966419861408	1	1.000	1.000
+posterior vs. posterior	anterior vs. posterior	-1.00633593038	0.347765996308	1	0.302	1.000
+posterior vs. posterior	anterior vs. stomach	3.90715864793	0.0297785895304	1	0.102	1.000
+posterior vs. posterior	anterior vs. esophagus	-6.07281585277	0.00896295332654	0.537777199593	0.113	1.000
+posterior vs. posterior	middle vs. posterior	-0.0835925176588	0.937396713436	1	0.956	1.000
+posterior vs. posterior	middle vs. stomach	-4.66470349636	0.0430135851866	1	0.251	1.000
+posterior vs. posterior	middle vs. esophagus	-12.7943692124	0.00605347522898	0.363208513739	0.248	1.000
+posterior vs. posterior	posterior vs. stomach	-3.9889881125	0.016278646768	0.976718806079	0.094	1.000
+posterior vs. posterior	posterior vs. esophagus	-12.3935047015	0.000243644311116	0.014618658667	0.101	1.000
+posterior vs. posterior	stomach vs. esophagus	3.58078742869	0.0699108673108	1	0.252	1.000
+anterior vs. middle	anterior vs. posterior	-0.77477822382	0.467894899209	1	0.513	1.000
+anterior vs. middle	anterior vs. stomach	2.3748311164	0.140806293918	1	0.325	1.000
+anterior vs. middle	anterior vs. esophagus	-3.53740495698	0.0714555813878	1	0.345	1.000
+anterior vs. middle	middle vs. posterior	-0.0539427298521	0.960372037796	1	0.972	1.000
+anterior vs. middle	middle vs. stomach	-2.4341939207	0.248150286909	1	0.365	1.000
+anterior vs. middle	middle vs. esophagus	-6.72021601813	0.0940419725789	1	0.342	1.000
+anterior vs. middle	posterior vs. stomach	-2.87042809509	0.064027893541	1	0.092	1.000
+anterior vs. middle	posterior vs. esophagus	-8.99414169692	0.00290131200979	0.174078720587	0.090	1.000
+anterior vs. middle	stomach vs. esophagus	1.91289211498	0.306657301517	1	0.326	1.000
+anterior vs. posterior	anterior vs. stomach	2.11096380975	0.0792671437291	1	0.122	1.000
+anterior vs. posterior	anterior vs. esophagus	-1.11700398172	0.306715340415	1	0.377	1.000
+anterior vs. posterior	middle vs. posterior	0.490349933373	0.638881561051	1	0.654	1.000
+anterior vs. posterior	middle vs. stomach	-1.02368133089	0.352935711065	1	0.255	1.000
+anterior vs. posterior	middle vs. esophagus	-3.79770644305	0.0126581500856	0.759489005136	0.094	1.000
+anterior vs. posterior	posterior vs. stomach	-1.48278504817	0.181694521008	1	0.216	1.000
+anterior vs. posterior	posterior vs. esophagus	-6.6739167874	0.000284179756743	0.0170507854046	0.012	0.720
+anterior vs. posterior	stomach vs. esophagus	1.78986595226	0.133488042839	1	0.088	1.000
+anterior vs. stomach	anterior vs. esophagus	-27.8574933551	0.00128610810513	0.0771664863076	0.323	1.000
+anterior vs. stomach	middle vs. posterior	-0.646216826082	0.564168008083	1	0.337	1.000
+anterior vs. stomach	middle vs. stomach	-18.1436995418	0.035052185373	1	0.339	1.000
+anterior vs. stomach	middle vs. esophagus	-38.418016304	0.016567124364	0.994027461841	0.354	1.000
+anterior vs. stomach	posterior vs. stomach	-5.60487438629	0.0112231710188	0.673390261127	0.100	1.000
+anterior vs. stomach	posterior vs. esophagus	-12.8740980619	0.00101150211698	0.0606901270186	0.101	1.000
+anterior vs. stomach	stomach vs. esophagus	2.41947005388	0.249510842226	1	0.331	1.000
+anterior vs. esophagus	middle vs. posterior	0.808216051794	0.478111228845	1	0.644	1.000
+anterior vs. esophagus	middle vs. stomach	-11.3383959364	0.0560023467824	1	0.305	1.000
+anterior vs. esophagus	middle vs. esophagus	-135.73447961	0.00469009979286	0.281405987571	0.323	1.000
+anterior vs. esophagus	posterior vs. stomach	-0.257477336958	0.813461151404	1	0.696	1.000
+anterior vs. esophagus	posterior vs. esophagus	-7.64240098109	0.00465200316281	0.279120189769	0.104	1.000
+anterior vs. esophagus	stomach vs. esophagus	114.829987227	0.00554388008792	0.332632805275	0.316	1.000
+middle vs. posterior	middle vs. stomach	-0.628212043066	0.59403817057	1	0.428	1.000
+middle vs. posterior	middle vs. esophagus	-1.79665396365	0.214225221599	1	0.434	1.000
+middle vs. posterior	posterior vs. stomach	-1.09398437022	0.335421282928	1	0.366	1.000
+middle vs. posterior	posterior vs. esophagus	-3.59318823507	0.0228966483055	1	0.065	1.000
+middle vs. posterior	stomach vs. esophagus	0.556876937115	0.633610751298	1	0.903	1.000
+middle vs. stomach	middle vs. esophagus	N/A	N/A	N/A	N/A	N/A
+middle vs. stomach	posterior vs. stomach	0.229335493487	0.839926417247	1	0.760	1.000
+middle vs. stomach	posterior vs. esophagus	-4.54226229727	0.0452067636443	1	0.265	1.000
+middle vs. stomach	stomach vs. esophagus	N/A	N/A	N/A	N/A	N/A
+middle vs. esophagus	posterior vs. stomach	4.56934716538	0.0447077212062	1	0.258	1.000
+middle vs. esophagus	posterior vs. esophagus	-0.239372292436	0.833111980223	1	1.000	1.000
+middle vs. esophagus	stomach vs. esophagus	N/A	N/A	N/A	N/A	N/A
+posterior vs. stomach	posterior vs. esophagus	-6.7741930335	0.00247812078958	0.148687247375	0.087	1.000
+posterior vs. stomach	stomach vs. esophagus	4.1725093185	0.052920569032	1	0.251	1.000
+posterior vs. esophagus	stomach vs. esophagus	8.9064565613	0.012372890818	0.742373449078	0.242	1.000

@@ -1,0 +1,4 @@
+posterior_vs._posterior	0.721875943494
+anterior_vs._middle	0.703403941814
+anterior_vs._posterior	0.717611674903	0.697565930587
+middle_vs._posterior	0.68014537946	0.702996965157
