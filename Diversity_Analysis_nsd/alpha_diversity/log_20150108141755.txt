@@ -1,0 +1,111 @@
+Logging started at 14:17:55 on 08 Jan 2015
+QIIME version: 1.8.0
+
+qiime_config values:
+blastmat_dir	/packages/qiime/qiime-1.8.0/blast-2.2.22-release/data
+sc_queue	all.q
+pynast_template_alignment_fp	/packages/qiime/qiime-1.8.0/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/common/contrib/qiime-resources/scripts/slurmit.py
+assign_taxonomy_reference_seqs_fp	/packages/qiime/qiime-1.8.0/gg_otus-13_8-release/rep_set/97_otus.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/packages/qiime/qiime-1.8.0/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin
+denoiser_min_per_core	50
+working_dir	/scratch/ddd38
+python_exe_fp	/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python
+temp_dir	/scratch/ddd38
+slurm_queue	all
+blastall_fp	/packages/qiime/qiime-1.8.0/blast-2.2.22-release/bin/blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/packages/qiime/qiime-1.8.0/gg_otus-13_8-release/taxonomy/97_otu_taxonomy.txt
+
+parameter file values:
+parallel:jobs_to_start	20
+
+Input file md5 sums:
+/scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/open_reference_output/combined_open_otu_table_no_singletons_doubletons.biom: 1803d397d61df16d03efc2a93fe60a03
+/scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Combined_run_HIIMB_MF_2015_def.txt: 732f1d0906d59d64a7f0de20a10322b6
+/scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/otu_picking/rep_set.tre: 380aa78a8b107d4f4b5223de986dc2de
+
+Executing commands.
+
+# Generate BIOM table summary command 
+biom summarize-table -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/open_reference_output/combined_open_otu_table_no_singletons_doubletons.biom -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/biom_table_summary.txt --suppress-md5 
+
+Stdout:
+
+Stderr:
+
+# Filter low sequence count samples from table (minimum sequence count: 21159) command 
+filter_samples_from_otu_table.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/open_reference_output/combined_open_otu_table_no_singletons_doubletons.biom -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/table_mc21159.biom -n 21159
+
+Stdout:
+
+Stderr:
+
+# Rarify the OTU table to 21159 sequences/sample command 
+single_rarefaction.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/table_mc21159.biom -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/table_even21159.biom -d 21159
+
+Stdout:
+
+Stderr:
+
+Executing commands.
+
+# Alpha rarefaction command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/parallel_multiple_rarefactions.py -T -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/table_mc21159.biom -m 10 -x 21159 -s 2114 -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//rarefaction/  --jobs_to_start 20
+
+Stdout:
+
+Stderr:
+
+# Alpha diversity on rarefied OTU tables command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/parallel_alpha_diversity.py -T -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//rarefaction/ -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//alpha_div/  -t /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/otu_picking/rep_set.tre --jobs_to_start 20
+
+Stdout:
+
+Stderr:
+
+# Collate alpha command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/collate_alpha.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//alpha_div/ -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//alpha_div_collated/ 
+
+Stdout:
+
+Stderr:
+
+# Removing intermediate files command 
+rm -r /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//rarefaction/ /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//alpha_div/
+
+Stdout:
+
+Stderr:
+
+# Rarefaction plot: All metrics command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/make_rarefaction_plots.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//alpha_div_collated/ -m /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Combined_run_HIIMB_MF_2015_def.txt -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/arare_max21159//alpha_rarefaction_plots/ 
+
+Stdout:
+
+Stderr:
+
+Skipping compare_alpha_diversity.py as no categories were provided.
+
+Executing commands.
+
+# Compress the filtered BIOM table command 
+gzip /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/table_mc21159.biom
+
+Stdout:
+
+Stderr:
+
+# Compress the rarified BIOM table command 
+gzip /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/alpha_diversity/table_even21159.biom
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 14:50:35 on 08 Jan 2015

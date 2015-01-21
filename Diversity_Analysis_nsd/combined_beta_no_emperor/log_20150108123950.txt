@@ -1,0 +1,77 @@
+Logging started at 12:39:50 on 08 Jan 2015
+QIIME version: 1.8.0
+
+qiime_config values:
+blastmat_dir	/packages/qiime/qiime-1.8.0/blast-2.2.22-release/data
+sc_queue	all.q
+pynast_template_alignment_fp	/packages/qiime/qiime-1.8.0/core_set_aligned.fasta.imputed
+cluster_jobs_fp	/common/contrib/qiime-resources/scripts/slurmit.py
+assign_taxonomy_reference_seqs_fp	/packages/qiime/qiime-1.8.0/gg_otus-13_8-release/rep_set/97_otus.fasta
+torque_queue	friendlyq
+template_alignment_lanemask_fp	/packages/qiime/qiime-1.8.0/lanemask_in_1s_and_0s
+jobs_to_start	1
+cloud_environment	False
+qiime_scripts_dir	/packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin
+denoiser_min_per_core	50
+working_dir	/scratch/ddd38
+python_exe_fp	/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python
+temp_dir	/scratch/ddd38
+slurm_queue	all
+blastall_fp	/packages/qiime/qiime-1.8.0/blast-2.2.22-release/bin/blastall
+seconds_to_sleep	60
+assign_taxonomy_id_to_taxonomy_fp	/packages/qiime/qiime-1.8.0/gg_otus-13_8-release/taxonomy/97_otu_taxonomy.txt
+
+parameter file values:
+parallel:jobs_to_start	12
+
+Input file md5 sums:
+/scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/table_even21282_nsd.biom: e1f0852fceb1520a16a0c01041b20b47
+/scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Combined_run_HIIMB_MF_2015_def.txt: 732f1d0906d59d64a7f0de20a10322b6
+/scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/open_reference_output/pynast_aligned_seqs/fasttree_phylogeny.tre: 961edf28f9b25e64240c731b72eab80e
+
+Executing commands.
+
+# Beta Diversity (weighted_unifrac) command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/parallel_beta_diversity.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/table_even21282_nsd.biom -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor --metrics weighted_unifrac -T  -t /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/open_reference_output/pynast_aligned_seqs/fasttree_phylogeny.tre --jobs_to_start 12
+
+Stdout:
+
+Stderr:
+
+# Rename distance matrix (weighted_unifrac) command 
+mv /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/weighted_unifrac_table_even21282_nsd.txt /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/weighted_unifrac_dm.txt
+
+Stdout:
+
+Stderr:
+
+# Principal coordinates (weighted_unifrac) command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/principal_coordinates.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/weighted_unifrac_dm.txt -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/weighted_unifrac_pc.txt 
+
+Stdout:
+
+Stderr:
+
+# Beta Diversity (unweighted_unifrac) command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/parallel_beta_diversity.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/table_even21282_nsd.biom -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor --metrics unweighted_unifrac -T  -t /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/open_reference_output/pynast_aligned_seqs/fasttree_phylogeny.tre --jobs_to_start 12
+
+Stdout:
+
+Stderr:
+
+# Rename distance matrix (unweighted_unifrac) command 
+mv /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/unweighted_unifrac_table_even21282_nsd.txt /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/unweighted_unifrac_dm.txt
+
+Stdout:
+
+Stderr:
+
+# Principal coordinates (unweighted_unifrac) command 
+/packages/qiime/qiime-1.8.0/python-2.7.3-release/bin/python /packages/qiime/qiime-1.8.0/qiime-1.8.0-release/bin/principal_coordinates.py -i /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/unweighted_unifrac_dm.txt -o /scratch/ddd38/HIIMB_2014/HIIMB_Combined_Run_2015/Diversity_Analysis_nsd/combined_beta_no_emperor/unweighted_unifrac_pc.txt 
+
+Stdout:
+
+Stderr:
+
+
+Logging stopped at 12:58:59 on 08 Jan 2015
