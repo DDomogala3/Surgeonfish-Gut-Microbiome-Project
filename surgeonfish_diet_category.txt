@@ -1,0 +1,1 @@
+Fish Species	Diet categoryA. blochii	detritusA. leucopareius	macroscopic algaeA. nigrofuscus	microscopic algaeA. oliveaceus	detritusA. triostegus	macroscopic algaeA. xanthopterus	detritusN. lituratus	macroscopic algaeN.unicornis	macroscopic algaeZ. flavescens	microscopic algaeZ. veliferum 	microscopic algae

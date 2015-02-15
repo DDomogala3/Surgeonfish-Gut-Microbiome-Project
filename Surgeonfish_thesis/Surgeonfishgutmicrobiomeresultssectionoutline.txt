@@ -1,0 +1,50 @@
+﻿Surgeonfish gut microbiome results section outline
+
+
+I The surgeonfish gut microbiome possesses a great diversity of microbial communities
+1.  Data from the collection trip to the Hawaii Institute of Marine Biology 2013
+1. Prior to quality filtering, Illumina sequencing generated 12,730,293 sequences. The median sequence length was 253 base pairs.
+2. there are 2,960 unique otus observed in the posterior section of the gut when 21,150  sequences are analyzed from each sample,
+3. There was an observed difference in microbial community structure when different sections of the surgeonfish gut were compared
+4.  Taxonomic summaries of different samples from the surgeonfish gut showed a great variety of taxa, but did not show the presence of Epulopiscium as a genus.
+5. After a correction in the taxonomic assignment of otus, the genus Epulopiscium could be observed in taxonomic summary graphs
+2. Data from the collection trip to the Hawaii Institute of Marine Biology 2014
+1. Prior to quality filtering, Illumina sequencing generated 11,750,346 sequences. The median sequence length was 265 base pairs.
+2. There are 1,814 unique otus observed in samples taken from Acanthurus oliveaceus when 22,000 sequences were analyzed from each sample.
+3.Data combined from trip to Hawaii Institute of Marine Biology in 2013 and 2014
+1.  2909.650 is the highest amount of unique otus observed from samples of any single fish in the combined analysis
+2. Microbial communities in Naso unicornis are significantly different in community structure between certain sections along the gut
+4. In some species of surgeonfish, Epulopiscium is the taxa that is in the highest proportion out of any of the observed microbial communities in certain areas of the gut.
+a.In species of surgeonfish such as Naso lituratus, Epulopiscium can make up to 53.29 % of the bacterial community of midgut samples
+b.Epulopiscium are present in 65% of  midgut samples taken from N.lituratu Epulopiscium are present in at least 65% of midgut samples taken from N. unicornis
+Neisseria sublava is a species of bacteria that is present 
+
+
+IV. Core gut microbiome of surgeonfish
+      
+1. Epulopiscium are present in 65% of  midgut samples taken from N.lituratus and N. unicornis 
+2. Neisseria sublava is a species of bacteria that is present in multiple species of surgeonfish. Acanthurus leucopareius, Acanthurus triostegus, Naso lituratus, Acanthurus xanthopterus, 
+
+
+
+
+V. Comparison between the human gut microbiome and the gut microbiome of different surgeonfish species
+1. Samples from species of A.nigrofuscus, N.lituratus, and A.leucopareius have more observed otus than samples from H.sapiens when results from closed reference otu picking were compared and samples were rarefied to 10,000 sequences/sample
+
+
+     b.How do the microbial communities of the surgeonfish gut microbiome compare to the human gut microbiome in terms of their  phylogenetic diversity?
+     c. How do species estimates compare between the surgeonfish gut microbiome and the human gut microbiome?
+
+
+
+
+
+
+
+
+
+
+
+
+1.  Taxonomic summaries of different samples from the Hawaii collection trip of 2013 showed a great variety of taxa, but did not show the presence of Epulopiscium as a genus.
+2. After a correction in the taxonomic assignment of otus via the RDP taxonomy assignment method, the genus Epulopiscium could be observed in taxonomic summary graphs
