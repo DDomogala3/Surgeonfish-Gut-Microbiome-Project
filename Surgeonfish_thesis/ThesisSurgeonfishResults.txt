@@ -1,0 +1,258 @@
+﻿Split Library Output
+	
+
+Median Sequence Length
+	253 base pairs
+	Minimum  Number of Reads
+	34 reads
+	Maximum Number of Reads
+	86,810 reads
+	
+
+	
+
+	Sequencing Results received on December 3rd, 2013 from the HIMB trip on July 2013
+
+
+
+
+Sequencing was performed using one lane of an Illumina Miseq next generation sequencing platform, this resulted in 12,730,293  sequence reads prior to quality filtering. The median sequence length was 253 base pairs, the highest number of reads in a sample was 86,810 reads, and the lowest number of reads in a sample was 34 reads. Sequences were subsampled to a depth of 21,159 sequences/sample, this subsampling meant that four samples were not included in downstream analysis due to these samples not having at least 21,159 reads. 
+        OTU table summary
+The minimum number of OTUs observed in a sample was 20, the maximum number of OTUs observed in any sample was 82,772. The median number of OTUs observed across all samples was 38,814, the mean OTU count was 40,337.5. The standard deviation for OTU counts across all samples was 18,977.046 OTUs. 
+
+
+
+
+        Results from Sequencing received on September 29th,2014 from HIMB trip in May 2014
+Sequencing that took place on September 29th, 2014 was performed on one lane of an Illumina Miseq next generation sequencing platform, this resulted in 11,750,346 reads prior to quality filtering. The median sequence length was 265 base pairs, the highest number of reads in a sample was 104,636 reads, and the lowest number of reads in a sample was 1,191 reads. Sequences were subsampled to a depth of 22,000 sequences/sample which meant that 3 samples were excluded from downstream analysis. 
+
+
+OTU table summary
+The minimum number of OTUs observed in a sample was 1,072, the maximum number of OTUs observed in any sample was 98,355 otus. The median number of OTUs observed across all samples was 56,254, the mean OTU count was 56,546. The standard deviation for OTU counts across all samples was 15,033.7 OTUs. 
+In further downstream analysis, it was necessary to group the reads from both sequencing runs together. The resulting sequencing files from separating each set of sequences from each run according to their corresponding barcodes were concatenated together and OTUs were picked via subsampled open reference OTU picking. 
+
+
+OTU table summary
+ The minimum number of OTUs observed in a sample was 20 in a sample, the maximum number of OTUs observed in a sample was 83,537 in a sample. The median number of OTUs observed in a sample was 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Alpha Diversity
+________________
+
+
+
+
+
+
+In some species of surgeonfish, Epulopiscium is the taxa that is in the highest proportion out of any of the observed microbial communities in certain areas of the gut. 
+
+
+
+
+
+
+
+
+Beta Diversity
+We will attempt to look aspects of the microbial ecology of the surgeonfish gut microbiome by analyzing the diversity between the samples that were taken. A total of 65 samples were taken from the stomach, anterior, middle, and posterior sections along the surgeonfish gut. After amplifying the 16s rRNA sequences from samples, and sequencing the samples that positively amplified bacteria on the Illumina Miseq, samples were ran through QIIME and Unifrac beta diversity metrics were analyzed.
+ Screen Shot 2014-08-20 at 6.18.21 PM.png 
+
+
+
+
+
+Principal Coordinate Analysis Plot of the Stomach, Anterior, Middle, and Posterior sections of the gut. The sampling depth for this was 21159 reads.
+	
+
+
+
+
+
+
+
+This PCoA plot shows the variability between different sections along the surgeonfish gut. The green points are the posterior section of the gut.
+
+
+
+
+
+
+Statistical Tests
+Permdisp on unweighted distance matrix:
+You can use this test to calculate distances from their centroids, and comparison of the average of these distances among groups. Rejection of the null hypothesis for Permanova suggests groups may differ because of their location, and their relative dispersion.
+
+
+Pairwise comparisons:
+(Observed p-value below diagonal, permuted p-value above diagonal)
+Probably the best way to interpret this analysis is that there were significant differences in multivariate dispersions for the anterior and posterior sections of the gut.
+
+
+        
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+Pseudo-F statistic    p-value    Number of permutations
+ 3.1775                       0.001    999
+
+
+Taxa Summary  Plots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Where are the Epulos? What you can see is that there may be Epulopiscium genus present, but in the taxa plots summary, the taxonomy is listed as an unknown genus. The full taxonomic assignment for epulos according to the greengenes database that was released on May of 2013 is represented as Kingdom Bacteria, Phylum Firmicutes, Class Clostridia, Order Clostridiales, Family Lachnospiraceae, and Genus Epulopiscium and Species Fishelsoni. The taxonomic assignment of Epulopiscium fishelsoni is different than what is listed in NCBI, it is listed as order clostridiales, and the family is listed as unclassified Clostridiales, with the genus being Epulopiscium.  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+McDonald, R., Schreier, H. J., & Watts, J. E. (2012). Phylogenetic analysis of microbial communities in different regions of the gastrointestinal tract in Panaque nigrolineatus, a wood-eating fish. PloS one, 7(10), e48018.
+
+
+Clements, K. D., Pasch, I. B., Moran, D., & Turner, S. J. (2007). Clostridia dominate 16S rRNA gene libraries prepared from the hindgut of temperate marine herbivorous fishes. Marine Biology, 150(6), 1431-1440.
+
+
+3
+Cole, J. R., Chai, B., Marsh, T. L., Farris, R. J., Wang, Q., Kulam, S. A., ... & Tiedje, J. M. (2003). The Ribosomal Database Project (RDP-II): previewing a new autoaligner that allows regular updates and the new prokaryotic taxonomy. Nucleic acids research, 31(1), 442-443.
+
+
+
+
+
+
+
+
+
+
+
+
+4
+Cole, J. R., Wang, Q., Cardenas, E., Fish, J., Chai, B., Farris, R. J., ... & Tiedje, J. M. (2009). The Ribosomal Database Project: improved alignments and new tools for rRNA analysis. Nucleic acids research, 37(suppl 1), D141-D145.
